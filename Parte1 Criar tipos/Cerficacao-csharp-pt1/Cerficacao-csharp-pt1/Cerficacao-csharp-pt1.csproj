@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aula01\01-TiposDeValor\TiposDeValor.cs" />
+    <Compile Include="Aula01\TiposInteiros\Inteiros.cs" />
+    <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
