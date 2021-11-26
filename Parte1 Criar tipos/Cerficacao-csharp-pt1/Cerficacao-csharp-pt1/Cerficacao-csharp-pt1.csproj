@@ -47,9 +47,9 @@
     <Compile Include="Aula01\03-Tipos de Ponto Flutuante\PontoFlutuante.cs" />
     <Compile Include="Aula01\06-Estruturas Definidas pelo Usuario\Estrutura.cs" />
     <Compile Include="Aula01\07-Enums\Enumerações.cs" />
-    <Compile Include="Aula01\Booleanos\Booleanos.cs" />
-    <Compile Include="Aula01\Decimal\DecimalValor.cs" />
-    <Compile Include="Aula01\TiposInteiros\Inteiros.cs" />
+    <Compile Include="Aula01\05-Booleanos\Booleanos.cs" />
+    <Compile Include="Aula01\04-Decimal\DecimalValor.cs" />
+    <Compile Include="Aula01\02-TiposInteiros\Inteiros.cs" />
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
