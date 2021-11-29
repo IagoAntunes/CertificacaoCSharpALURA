@@ -141,3 +141,9 @@ namespace Cerficacao_csharp_pt1
  * dynamic
  * string
  */
+/*04
+ * Metodos
+ * parametros opcionais e nomeados
+ * Metodos de Extensao
+ * propriedades indexadas
+ */
