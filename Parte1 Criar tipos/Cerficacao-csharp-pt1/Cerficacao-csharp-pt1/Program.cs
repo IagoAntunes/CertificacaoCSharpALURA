@@ -10,7 +10,9 @@ using Cerficacao_csharp_pt1.Aula02._03_Interfaces;
 using Cerficacao_csharp_pt1.Aula02._04_Delegates;
 using Cerficacao_csharp_pt1.Aula02._05_Objetos;
 using Cerficacao_csharp_pt1.Aula02._06_Dynamic;
+using Cerficacao_csharp_pt1.Aula02.Strings;
 using Cerficacao_csharp_pt1.Aula02.Tipos_de_Referencia;
+using Cerficacao_csharp_pt1.Aula04._02_Metodos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +40,8 @@ namespace Cerficacao_csharp_pt1
             Delegates delegates = new Delegates();
             Objetos objetos = new Objetos();
             Dinamicos dinamicos = new Dinamicos();
-
+            Strings strings = new Strings();
+            Metodos metodos = new Metodos();
 
             opc = int.Parse(Console.ReadLine());
             switch (opc)
@@ -83,6 +86,12 @@ namespace Cerficacao_csharp_pt1
                     break;
                 case 13:
                     dinamicos.Executar();
+                    break;
+                case 14:
+                    strings.Executar();
+                    break;
+                case 15:
+                    metodos.Executar();
                     break;
                     
 
