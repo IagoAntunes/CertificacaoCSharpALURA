@@ -14,6 +14,8 @@ using Cerficacao_csharp_pt1.Aula02.Strings;
 using Cerficacao_csharp_pt1.Aula02.Tipos_de_Referencia;
 using Cerficacao_csharp_pt1.Aula04._02_Metodos;
 using Cerficacao_csharp_pt1.Aula04._03_ParametrosOpcionais;
+using Cerficacao_csharp_pt1;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

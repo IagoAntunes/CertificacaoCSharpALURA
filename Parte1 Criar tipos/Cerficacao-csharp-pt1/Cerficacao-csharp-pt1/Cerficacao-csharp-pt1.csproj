@@ -60,6 +60,7 @@
     <Compile Include="Aula04\02-Metodos\Metodos.cs" />
     <Compile Include="Aula04\03-ParametrosOpcionais\ParametrosNomeados.cs" />
     <Compile Include="Aula04\03-ParametrosOpcionais\ParametrosOpcionais.cs" />
+    <Compile Include="Aula04\04-MetodosDeExtensao\MetodosDeExtensao.cs" />
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
