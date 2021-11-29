@@ -50,6 +50,7 @@ namespace Cerficacao_csharp_pt1
             MetodosDeExtensao metodosDeExtensao = new MetodosDeExtensao();
             PropriedadesIndexadas propIndexadas = new PropriedadesIndexadas();
             Sobrecargas sobrecargas = new Sobrecargas();
+            MetodosSubstituidos metodosSubstituidos = new MetodosSubstituidos();
 
             opc = int.Parse(Console.ReadLine());
             switch (opc)
@@ -116,6 +117,9 @@ namespace Cerficacao_csharp_pt1
                 case 20:
                     sobrecargas.Executar();
                     break;
+                case 21:
+                    metodosSubstituidos.Executar();
+                    break;
 
 
                
@@ -151,4 +155,8 @@ namespace Cerficacao_csharp_pt1
  * parametros opcionais e nomeados
  * Metodos de Extensao
  * propriedades indexadas
+ */
+/*05
+ * Criar metodos sobrecarregados
+ * Criar metodos substituidos
  */
