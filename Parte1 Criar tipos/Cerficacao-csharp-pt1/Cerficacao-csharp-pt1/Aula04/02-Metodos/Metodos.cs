@@ -58,7 +58,7 @@ namespace Cerficacao_csharp_pt1.Aula04._02_Metodos
                 (outroRetangulo.Largura / outroRetangulo.Altura))
                 ||
                 ((retangulo.Altura) / retangulo.Largura) ==
-                (outroRetangulo.Largura / outroRetangulo.Altura));
+                (outroRetangulo.Largura / outroRetangulo.Altura);
         }
     }
 }

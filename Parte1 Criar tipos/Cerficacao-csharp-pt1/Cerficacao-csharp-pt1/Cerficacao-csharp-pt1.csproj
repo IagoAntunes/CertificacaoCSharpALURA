@@ -58,6 +58,8 @@
     <Compile Include="Aula02\06-Dynamic\Dinamicos.cs" />
     <Compile Include="Aula02\Strings\Strings.cs" />
     <Compile Include="Aula04\02-Metodos\Metodos.cs" />
+    <Compile Include="Aula04\03-ParametrosOpcionais\ParametrosNomeados.cs" />
+    <Compile Include="Aula04\03-ParametrosOpcionais\ParametrosOpcionais.cs" />
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
