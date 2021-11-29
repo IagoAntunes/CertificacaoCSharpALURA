@@ -10,12 +10,12 @@ namespace Cerficacao_csharp_pt1
     {
         public void Executar()
         {
+            Impressora teste = null;
             Impressora impressora = new Impressora("Este é \r\n o meu documento");
             impressora.ImprimirDocumento();
             //impressora.ImprimirDocumentoHTML(impressora.Documento);
             impressora.imprimirdocumentohtml();
-
-
+   
 
         }
 
@@ -42,6 +42,13 @@ namespace Cerficacao_csharp_pt1
         public static void imprimirdocumentohtml(this Impressora impressora)
         {
             Console.WriteLine($"<html><body>{impressora.Documento}</body></html>");
+        }
+    }
+    public static class IntExtensions
+    {
+        public static bool IsGreaterThan(this object i, int value)
+        {
+            return (int)i > value;
         }
     }
 
