@@ -49,6 +49,7 @@ namespace Cerficacao_csharp_pt1
             ParametrosOpcionais POpcionais = new ParametrosOpcionais();
             MetodosDeExtensao metodosDeExtensao = new MetodosDeExtensao();
             PropriedadesIndexadas propIndexadas = new PropriedadesIndexadas();
+            Sobrecargas sobrecargas = new Sobrecargas();
 
             opc = int.Parse(Console.ReadLine());
             switch (opc)
@@ -112,6 +113,10 @@ namespace Cerficacao_csharp_pt1
                 case 19:
                     propIndexadas.Executar();
                     break;
+                case 20:
+                    sobrecargas.Executar();
+                    break;
+
 
                
                     
