@@ -50,6 +50,13 @@
     <Compile Include="Aula01\05-Booleanos\Booleanos.cs" />
     <Compile Include="Aula01\04-Decimal\DecimalValor.cs" />
     <Compile Include="Aula01\02-TiposInteiros\Inteiros.cs" />
+    <Compile Include="Aula02\01-Tipos de Referencia\TiposDeReferencia.cs" />
+    <Compile Include="Aula02\02-Classes\Classes.cs" />
+    <Compile Include="Aula02\03-Interfaces\Interfaces.cs" />
+    <Compile Include="Aula02\04-Delegates\Delegates.cs" />
+    <Compile Include="Aula02\05-Objetos\Objetos.cs" />
+    <Compile Include="Aula02\06-Dynamic\Dinamicos.cs" />
+    <Compile Include="Aula02\Strings\Strings.cs" />
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

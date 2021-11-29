@@ -5,6 +5,12 @@ using Cerficacao_csharp_pt1.Aula01._07_Enums;
 using Cerficacao_csharp_pt1.Aula01.Booleanos;
 using Cerficacao_csharp_pt1.Aula01.Decimal;
 using Cerficacao_csharp_pt1.Aula01.TiposInteiros;
+using Cerficacao_csharp_pt1.Aula02._02_Classes;
+using Cerficacao_csharp_pt1.Aula02._03_Interfaces;
+using Cerficacao_csharp_pt1.Aula02._04_Delegates;
+using Cerficacao_csharp_pt1.Aula02._05_Objetos;
+using Cerficacao_csharp_pt1.Aula02._06_Dynamic;
+using Cerficacao_csharp_pt1.Aula02.Tipos_de_Referencia;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +32,14 @@ namespace Cerficacao_csharp_pt1
             Booleanos booleanos = new Booleanos();
             Estrutura estruturas = new Estrutura();
             Enumerações enumeracoes = new Enumerações();
+            TiposDeReferencia referencias = new TiposDeReferencia();
+            Classes classes = new Classes();
+            Interfaces interf = new Interfaces();
+            Delegates delegates = new Delegates();
+            Objetos objetos = new Objetos();
+            Dinamicos dinamicos = new Dinamicos();
+
+
             opc = int.Parse(Console.ReadLine());
             switch (opc)
             {
@@ -52,6 +66,26 @@ namespace Cerficacao_csharp_pt1
                 case 7:
                     enumeracoes.Executar();
                     break;
+                case 8:
+                    referencias.Executar();
+                    break;
+                case 9:
+                    classes.Executar();
+                    break;
+                case 10:
+                    interf.Executar();
+                    break;
+                case 11:
+                    delegates.Executar();
+                    break;
+                case 12:
+                    objetos.Executar();
+                    break;
+                case 13:
+                    dinamicos.Executar();
+                    break;
+                    
+
             }
             Console.ReadLine();
         }
@@ -60,7 +94,7 @@ namespace Cerficacao_csharp_pt1
 /*01
  * Caracteristicas principais dos tipos de valor
  * Inicializando Tipos de Valor
- * Tipos Integrais
+ * Tipos Integraisdasw
  */
 /* 02
  * Tipos de ponto Flutuante
@@ -68,3 +102,12 @@ namespace Cerficacao_csharp_pt1
  * Booleanos
  * Estrutura definidas pelo Usuario
  * Enums*/
+/*03
+ * tipos de referencia
+ * classes
+ * interface
+ * delegate
+ * object
+ * dynamic
+ * string
+ */
