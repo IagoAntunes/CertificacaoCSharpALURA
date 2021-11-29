@@ -30,12 +30,6 @@ namespace Cerficacao_csharp_pt2
 
             }
             Console.ReadLine();
-
-
-
-
-
-
         }
     }
 }
