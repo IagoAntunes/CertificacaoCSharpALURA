@@ -47,6 +47,8 @@ namespace Cerficacao_csharp_pt1
             Metodos metodos = new Metodos();
             ParametrosNomeados PNomeados = new ParametrosNomeados();
             ParametrosOpcionais POpcionais = new ParametrosOpcionais();
+            MetodosDeExtensao metodosDeExtensao = new MetodosDeExtensao();
+            PropriedadesIndexadas propIndexadas = new PropriedadesIndexadas();
 
             opc = int.Parse(Console.ReadLine());
             switch (opc)
@@ -104,6 +106,13 @@ namespace Cerficacao_csharp_pt1
                 case 17:
                     POpcionais.Executar();
                     break;
+                case 18:
+                    metodosDeExtensao.Executar();
+                    break;
+                case 19:
+                    propIndexadas.Executar();
+                    break;
+
                
                     
 
