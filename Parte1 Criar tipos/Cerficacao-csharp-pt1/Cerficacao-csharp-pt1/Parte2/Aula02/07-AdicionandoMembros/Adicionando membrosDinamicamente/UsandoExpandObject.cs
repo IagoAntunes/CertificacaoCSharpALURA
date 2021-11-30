@@ -17,7 +17,6 @@ namespace Cerficacao_csharp_pt1
 
 
             dynamic mensagem = JsonConvert.DeserializeObject<ExpandoObject>(json);
-
             mensagem.Texto = "Olá ," + mensagem.Para;
 
             EnviarMensagem(mensagem);

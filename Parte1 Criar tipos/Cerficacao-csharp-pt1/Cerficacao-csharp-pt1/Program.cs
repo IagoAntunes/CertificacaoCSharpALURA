@@ -59,6 +59,7 @@ namespace Cerficacao_csharp_pt1
             ResolucaoSobrecarga resolucaoSobrecarga = new ResolucaoSobrecarga();
 
             UsandoExpandObject usandoExpandObject = new UsandoExpandObject();
+            InteropCOM InteropCOM = new InteropCOM();
 
             opc = int.Parse(Console.ReadLine());
             switch (opc)
@@ -144,9 +145,13 @@ namespace Cerficacao_csharp_pt1
                 case 32:
                     usandoExpandObject.Executar();
                     break;
+                case 33:
+                    InteropCOM.Executar();
+                    break;
 
 
- 
+
+
             }
             Console.ReadLine();
         }
