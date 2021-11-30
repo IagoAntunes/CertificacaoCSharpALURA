@@ -10,7 +10,7 @@ namespace _3.EncapsulamentoeHirerarquia
     {
         static void Main(string[] args)
         {
-            Funcionario funcionario = new Funcionario();
+            Funcionario funcionario = new Funcionario(10000);
             /*
             funcionario.salario = 1000;
 
@@ -19,7 +19,7 @@ namespace _3.EncapsulamentoeHirerarquia
             funcionario.salario = -1200;
             Console.WriteLine(funcionario.salario);
             */
-            funcionario.Salario = 1200;
+            //funcionario.Salario = 1200;
             Console.WriteLine(funcionario.Salario);
 
 
@@ -29,22 +29,31 @@ namespace _3.EncapsulamentoeHirerarquia
     class Funcionario
     {
         private decimal salario;
-
+        public Funcionario(decimal salario)
+        {
+            if(salario < 0)
+            {
+                throw new ArgumentException();
+            }
+            this.salario = salario;
+        }
         public decimal Salario//Encapsulamento do campo Salario 
         {
             get
             {
                 return salario;
             }
-            set
-            {
-                if (value < 0)
-                {
-                    throw new ArgumentOutOfRangeException("Salario nao pode ser negativo!");
-                }
-                this.salario = value;
-            }
+            //set
+            //{
+            //    if (value < 0)
+            //    {
+            //        throw new ArgumentOutOfRangeException("Salario nao pode ser negativo!");
+            //    }
+            //    this.salario = value;
+            //}
         }
+
+        //public decimal Salario { get; set; }
 
 
     }
