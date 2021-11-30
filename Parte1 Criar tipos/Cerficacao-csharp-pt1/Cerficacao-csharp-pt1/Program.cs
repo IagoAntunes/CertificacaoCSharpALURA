@@ -58,6 +58,8 @@ namespace Cerficacao_csharp_pt1
             ConversoesDeDynamic conversoesDeDynamic = new ConversoesDeDynamic();
             ResolucaoSobrecarga resolucaoSobrecarga = new ResolucaoSobrecarga();
 
+            UsandoExpandObject usandoExpandObject = new UsandoExpandObject();
+
             opc = int.Parse(Console.ReadLine());
             switch (opc)
             {
@@ -138,6 +140,9 @@ namespace Cerficacao_csharp_pt1
                     break;
                 case 31:
                     resolucaoSobrecarga.Executar();
+                    break;
+                case 32:
+                    usandoExpandObject.Executar();
                     break;
 
 
