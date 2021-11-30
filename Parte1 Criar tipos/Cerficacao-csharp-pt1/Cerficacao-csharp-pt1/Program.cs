@@ -51,9 +51,11 @@ namespace Cerficacao_csharp_pt1
             PropriedadesIndexadas propIndexadas = new PropriedadesIndexadas();
             Sobrecargas sobrecargas = new Sobrecargas();
             MetodosSubstituidos metodosSubstituidos = new MetodosSubstituidos();
-            UsandoDynamic UsandoDynamic = new UsandoDynamic();
+            
 
             ConversoesComClasses conversoes = new ConversoesComClasses();
+            UsandoDynamic UsandoDynamic = new UsandoDynamic();
+            ConversoesDeDynamic conversoesDeDynamic = new ConversoesDeDynamic();
 
             opc = int.Parse(Console.ReadLine());
             switch (opc)
@@ -130,11 +132,12 @@ namespace Cerficacao_csharp_pt1
                 case 29:
                     UsandoDynamic.Executar();
                     break;
+                case 30:
+                    conversoesDeDynamic.Executar();
+                    break;
 
 
-               
-                    
-
+ 
             }
             Console.ReadLine();
         }

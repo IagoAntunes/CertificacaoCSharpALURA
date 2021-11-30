@@ -72,6 +72,7 @@
     <Compile Include="Parte2\Aula02\ConversoesImplicitas\ConversoesImplicitas.cs" />
     <Compile Include="Parte2\Aula02\ConversoesImplicitas\IAnimal.cs" />
     <Compile Include="Parte2\Aula02\ConversõesDefinidasPeloUser\OperadoresDeConversao.cs" />
+    <Compile Include="Parte2\Aula02\Lidar com tipos dinamicos\Conversoes entre dynamic\ConversoesDeDynamic.cs" />
     <Compile Include="Parte2\Aula02\Lidar com tipos dinamicos\String,var,object\UsandoDynamic.cs" />
     <Compile Include="Parte2\Aula02\Operadores IS e AS\OperadoresISeAS.cs" />
     <Compile Include="Program.cs" />
