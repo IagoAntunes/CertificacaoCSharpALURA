@@ -56,6 +56,7 @@ namespace Cerficacao_csharp_pt1
             ConversoesComClasses conversoes = new ConversoesComClasses();
             UsandoDynamic UsandoDynamic = new UsandoDynamic();
             ConversoesDeDynamic conversoesDeDynamic = new ConversoesDeDynamic();
+            ResolucaoSobrecarga resolucaoSobrecarga = new ResolucaoSobrecarga();
 
             opc = int.Parse(Console.ReadLine());
             switch (opc)
@@ -134,6 +135,9 @@ namespace Cerficacao_csharp_pt1
                     break;
                 case 30:
                     conversoesDeDynamic.Executar();
+                    break;
+                case 31:
+                    resolucaoSobrecarga.Executar();
                     break;
 
 
