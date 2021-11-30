@@ -52,6 +52,9 @@ namespace Cerficacao_csharp_pt1
             Sobrecargas sobrecargas = new Sobrecargas();
             MetodosSubstituidos metodosSubstituidos = new MetodosSubstituidos();
 
+
+            ConversoesComClasses conversoes = new ConversoesComClasses();
+
             opc = int.Parse(Console.ReadLine());
             switch (opc)
             {
@@ -120,6 +123,11 @@ namespace Cerficacao_csharp_pt1
                 case 21:
                     metodosSubstituidos.Executar();
                     break;
+                    
+                case 28:
+                    conversoes.Executar();
+                    break;
+
 
 
                

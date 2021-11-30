@@ -67,9 +67,12 @@
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Parte2\Aula01\01-Boxing\Boxing.cs" />
     <Compile Include="Parte2\Aula01\02-Unboxing\Unboxing.cs" />
+    <Compile Include="Parte2\Aula02\ConversoesComClasses.cs" />
     <Compile Include="Parte2\Aula02\ConversoesExplicitas\ConversoesExplicitas.cs" />
     <Compile Include="Parte2\Aula02\ConversoesImplicitas\ConversoesImplicitas.cs" />
     <Compile Include="Parte2\Aula02\ConversoesImplicitas\IAnimal.cs" />
+    <Compile Include="Parte2\Aula02\ConversõesDefinidasPeloUser\OperadoresDeConversao.cs" />
+    <Compile Include="Parte2\Aula02\Operadores IS e AS\OperadoresISeAS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

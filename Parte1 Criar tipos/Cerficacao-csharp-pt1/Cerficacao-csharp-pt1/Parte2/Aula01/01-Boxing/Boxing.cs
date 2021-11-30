@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cerficacao_csharp_pt2
+namespace Cerficacao_csharp_pt1
 {
     internal class Boxing : IAulaItem
     {
