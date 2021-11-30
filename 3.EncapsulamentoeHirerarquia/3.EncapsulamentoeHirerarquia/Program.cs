@@ -58,3 +58,17 @@ namespace _3.EncapsulamentoeHirerarquia
 
     }
 }
+/*01
+ * Propriedades e Acessadores
+ * Introducao
+ * Encapsulamento
+ * -Acessadores get e set
+ * Propriedade somente leitura
+ * propriedade autoimplementada
+ * -Como o compilador gera codigo da propriedade autoimplementada
+ * Modificadores de Visibilidade
+ * -private
+ * -protected
+ * -internal
+ * -public
+ */
