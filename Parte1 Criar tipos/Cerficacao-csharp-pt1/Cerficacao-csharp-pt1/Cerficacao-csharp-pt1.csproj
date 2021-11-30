@@ -67,6 +67,7 @@
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Parte2\Aula01\01-Boxing\Boxing.cs" />
     <Compile Include="Parte2\Aula01\02-Unboxing\Unboxing.cs" />
+    <Compile Include="Parte2\Aula02\ConversoesExplicitas\ConversoesExplicitas.cs" />
     <Compile Include="Parte2\Aula02\ConversoesImplicitas\ConversoesImplicitas.cs" />
     <Compile Include="Parte2\Aula02\ConversoesImplicitas\IAnimal.cs" />
     <Compile Include="Program.cs" />
@@ -75,5 +76,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,16 +14,11 @@ namespace Cerficacao_csharp_pt1
             long inteiroLongo = inteiro;
             Console.WriteLine(inteiroLongo);
 
-
-
             Gato gato = new Gato();
             Animal animal = gato;
             Console.WriteLine(animal.GetType());
             IAnimal ianimal = (IAnimal)gato;
             Console.WriteLine(ianimal.GetType());
-
-
-
 
         }
     }
