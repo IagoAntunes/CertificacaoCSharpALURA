@@ -51,7 +51,7 @@ namespace Cerficacao_csharp_pt1
             PropriedadesIndexadas propIndexadas = new PropriedadesIndexadas();
             Sobrecargas sobrecargas = new Sobrecargas();
             MetodosSubstituidos metodosSubstituidos = new MetodosSubstituidos();
-
+            UsandoDynamic UsandoDynamic = new UsandoDynamic();
 
             ConversoesComClasses conversoes = new ConversoesComClasses();
 
@@ -127,7 +127,9 @@ namespace Cerficacao_csharp_pt1
                 case 28:
                     conversoes.Executar();
                     break;
-
+                case 29:
+                    UsandoDynamic.Executar();
+                    break;
 
 
                
