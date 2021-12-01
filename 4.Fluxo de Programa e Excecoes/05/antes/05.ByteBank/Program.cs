@@ -28,7 +28,7 @@ namespace _05.ByteBank
             catch (ArgumentNullException ae)
             {
                 Console.WriteLine("Aconteceu um problema na transferencia.");
-
+                Logger.LogErro(ae.ToString());
             }
             catch(Exception ex)
             {
@@ -89,6 +89,23 @@ namespace _05.ByteBank
         public void Efetuar(ContaCorrente contaDebito, ContaCorrente contaCredito
             , decimal valor)
         {
+            if(contaDebito == null)
+            {
+                throw new ArgumentNullException("contaDebito");
+            }
+            if(contaCredito == null)
+            {
+                throw new ArgumentNullException("contaCredito");
+            }
+            if(valor < 0)
+            {
+                throw new ArgumentOutOfRangeException("Valor negativo . . . ");
+            }
+            if(valor > contaDebito.Saldo) { 
+                throw new InsuficienteException03();
+            }
+
+
             Logger.LogInfo("Entrando do método Efetuar.");
 
             contaDebito.Debitar(valor);
@@ -149,12 +166,12 @@ namespace _05.ByteBank
     }
 
     [Serializable]
-    public class SaldoInsuficienteException : Exception
+    public class SaldoInsuficienteException02 : Exception
     {
-        public SaldoInsuficienteException() { }
-        public SaldoInsuficienteException(string message) : base(message) { }
-        public SaldoInsuficienteException(string message, Exception inner) : base(message, inner) { }
-        protected SaldoInsuficienteException(
+        public SaldoInsuficienteException02() { }
+        public SaldoInsuficienteException02(string message) : base(message) { }
+        public SaldoInsuficienteException02(string message, Exception inner) : base(message, inner) { }
+        protected SaldoInsuficienteException02(
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
 
@@ -181,4 +198,19 @@ namespace _05.ByteBank
             }
         }
     }
+
+
+    [Serializable]
+    public class InsuficienteException03 : Exception
+    {
+        public InsuficienteException03() { }
+        public InsuficienteException03(string message) : base(message) { }
+        public InsuficienteException03(string message, Exception inner) : base(message, inner) { }
+        protected InsuficienteException03(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+
+        public override string Message => "Saldo Insuficiente:!:!";
+    }
+
 }
