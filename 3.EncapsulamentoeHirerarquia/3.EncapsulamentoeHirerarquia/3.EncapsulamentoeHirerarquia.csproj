@@ -51,6 +51,9 @@
     <Compile Include="Aula02\Lanterna.cs" />
     <Compile Include="Aula02\Radio.cs" />
     <Compile Include="Aula02\Televisao.cs" />
+    <Compile Include="Aula03\Funcionario02.cs" />
+    <Compile Include="Aula03\IFuncionario.cs" />
+    <Compile Include="Aula03\IPlantonista.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="salario\Aumentar.cs" />

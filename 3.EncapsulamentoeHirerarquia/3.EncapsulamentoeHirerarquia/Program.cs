@@ -10,6 +10,29 @@ namespace _3.EncapsulamentoeHirerarquia
     {
         static void Main(string[] args)
         {
+            Funcionario02 funcionario = new Funcionario02(1500);
+            funcionario.CPF = "123.456.789-00";
+            funcionario.Nome = "Jose da Silva";
+            funcionario.DataNascimento = new DateTime(2000, 1, 1);
+
+            ((IFuncionario)funcionario).CargaHorariaMensal = 168;
+            ((IPlantonista)funcionario).CargaHorariaMensal = 32;
+            funcionario.EfetuarPagamento();
+            funcionario.CrachaGerado += (s, e) =>
+             {
+                 Console.WriteLine("Cracha gerado");
+             };
+            ((IFuncionario)funcionario).GerarCracha();
+            ((IPlantonista)funcionario).GerarCracha();
+
+
+
+
+            Console.ReadLine();
+        }
+
+        static void aula02()
+        {
             IEletros eletro1 = new Televisao();
             IEletros eletro2 = new Abajur();
             IEletros eletro3 = new Lanterna();
@@ -19,16 +42,12 @@ namespace _3.EncapsulamentoeHirerarquia
             eletro2 = new Televisao();
             eletro3 = new Radio();
             eletro4 = new Lanterna();
-
-
-            Console.ReadLine();
         }
 
-        static void aula02()
+        static void aula03()
         {
 
         }
-
     }
 
 }
@@ -55,4 +74,8 @@ namespace _3.EncapsulamentoeHirerarquia
  * Metodos
  * propriedades
  * eventos
+ */
+/*03
+ * Interfaces Explicitas
+ * -Implementando membros de mesmo nome de interfaces diferentes
  */
