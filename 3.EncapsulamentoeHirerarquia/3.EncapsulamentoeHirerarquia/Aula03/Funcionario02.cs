@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace _3.EncapsulamentoeHirerarquia
 {
-    class Funcionario02 : IFuncionario,IPlantonista
+    class Funcionario02 : Pessoa, IFuncionario,IPlantonista
     {
-        public string CPF { get; set; }
-        public string Nome { get; set; }
-        public DateTime DataNascimento { get; set; }
         public event EventHandler CrachaGerado;
         void IFuncionario.GerarCracha()
         {
