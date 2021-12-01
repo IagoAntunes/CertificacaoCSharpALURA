@@ -9,7 +9,13 @@ namespace _01.ByteBank
 
         static void Main(string[] args)
         {
+            ContaBancaria conta = new ContaBancaria(100);
+            conta.SacarDinheiro(35);
+            conta.SacarDinheiro(150);
 
+
+
+            Console.ReadLine();
         }
 
 
