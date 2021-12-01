@@ -10,33 +10,26 @@ namespace _3.EncapsulamentoeHirerarquia
     {
         static void Main(string[] args)
         {
-            Funcionario02 funcionario = new Funcionario02(1500);
-            funcionario.CPF = "123.456.789-00";
-            funcionario.Nome = "Jose da Silva";
-            funcionario.DataNascimento = new DateTime(2000, 1, 1);
-
-            ((IFuncionario)funcionario).CargaHorariaMensal = 168;
-            ((IPlantonista)funcionario).CargaHorariaMensal = 32;
-            funcionario.EfetuarPagamento();
-            funcionario.CrachaGerado += (s, e) =>
+            Aluno aluno1 = new Aluno()
             {
-                Console.WriteLine("Cracha gerado");
+                Nome = "Jose da Silva",
+                DataNascimento = new DateTime(1990, 1, 1)
             };
-            ((IFuncionario)funcionario).GerarCracha();
-            ((IPlantonista)funcionario).GerarCracha();
-
-            Cliente cliente = new Cliente
+            Aluno aluno2 = new Aluno()
             {
-                CPF = "789.456.123-99",
-                DataNascimento = new DateTime(1980, 1, 1),
-                Nome = "Maria de Souza",
-                dataUltimaCompra = new DateTime(2018, 1, 1),
-                ValorUltimaCompra = 200
+                Nome = "Jose da Silva",
+                DataNascimento = new DateTime(1995, 1, 1)
+            };
+            Aluno aluno3 = new Aluno()
+            {
+                Nome = "jose da Silva",
+                DataNascimento = new DateTime(1990, 1, 1)
             };
 
-            Console.WriteLine(cliente);
 
-            Pessoa teste = new Cliente();
+            Console.WriteLine(aluno1.Equals(aluno2));
+            Console.WriteLine(aluno1.Equals(aluno3));
+
 
             Console.ReadLine();
         }
@@ -74,13 +67,43 @@ namespace _3.EncapsulamentoeHirerarquia
     
         static void aula04()
         {
+            Funcionario02 funcionario = new Funcionario02(1500);
+            funcionario.CPF = "123.456.789-00";
+            funcionario.Nome = "Jose da Silva";
+            funcionario.DataNascimento = new DateTime(2000, 1, 1);
 
+            ((IFuncionario)funcionario).CargaHorariaMensal = 168;
+            ((IPlantonista)funcionario).CargaHorariaMensal = 32;
+            funcionario.EfetuarPagamento();
+            funcionario.CrachaGerado += (s, e) =>
+            {
+                Console.WriteLine("Cracha gerado");
+            };
+            ((IFuncionario)funcionario).GerarCracha();
+            ((IPlantonista)funcionario).GerarCracha();
+
+            Cliente cliente = new Cliente
+            {
+                CPF = "789.456.123-99",
+                DataNascimento = new DateTime(1980, 1, 1),
+                Nome = "Maria de Souza",
+                dataUltimaCompra = new DateTime(2018, 1, 1),
+                ValorUltimaCompra = 200
+            };
+
+            Console.WriteLine(cliente);
+
+            Pessoa teste = new Cliente();
         }
     
-    
+        static void aula05()
+        {
+
+        }
     }
 
 }
+
 
 
 
