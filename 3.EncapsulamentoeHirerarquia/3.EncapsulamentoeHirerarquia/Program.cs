@@ -10,54 +10,32 @@ namespace _3.EncapsulamentoeHirerarquia
     {
         static void Main(string[] args)
         {
-            Funcionario funcionario = new Funcionario(10000);
-            /*
-            funcionario.salario = 1000;
+            IEletros eletro1 = new Televisao();
+            IEletros eletro2 = new Abajur();
+            IEletros eletro3 = new Lanterna();
+            IEletros eletro4 = new Radio();
 
-            Console.WriteLine(funcionario.salario);
-
-            funcionario.salario = -1200;
-            Console.WriteLine(funcionario.salario);
-            */
-            //funcionario.Salario = 1200;
-            Console.WriteLine(funcionario.Salario);
+            eletro1 = new Abajur();
+            eletro2 = new Televisao();
+            eletro3 = new Radio();
+            eletro4 = new Lanterna();
 
 
             Console.ReadLine();
         }
-    }
-    class Funcionario
-    {
-        private decimal salario;
-        public Funcionario(decimal salario)
+
+        static void aula02()
         {
-            if(salario < 0)
-            {
-                throw new ArgumentException();
-            }
-            this.salario = salario;
-        }
-        public decimal Salario//Encapsulamento do campo Salario 
-        {
-            get
-            {
-                return salario;
-            }
-            //set
-            //{
-            //    if (value < 0)
-            //    {
-            //        throw new ArgumentOutOfRangeException("Salario nao pode ser negativo!");
-            //    }
-            //    this.salario = value;
-            //}
+
         }
 
-        //public decimal Salario { get; set; }
-
-
     }
+
 }
+
+
+
+
 /*01
  * Propriedades e Acessadores
  * Introducao
@@ -71,4 +49,10 @@ namespace _3.EncapsulamentoeHirerarquia
  * -protected
  * -internal
  * -public
+ */
+/*02
+ * Projetando e extraindo interfaces
+ * Metodos
+ * propriedades
+ * eventos
  */
