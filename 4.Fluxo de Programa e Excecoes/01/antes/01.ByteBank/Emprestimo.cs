@@ -16,11 +16,18 @@ namespace _01.ByteBank
             foreach (var caractere in codigoContrato)
             {
                 //só é válido se for numérico ou maiúscula
-                bool valido = false;
+                bool numerico = Char.IsNumber(caractere);
+                bool maiuscula = Char.IsUpper(caractere);
+                bool valido = numerico || maiuscula;
+                if (valido)
+                {
+                    codigoContratoValido = true;
+                    break;
+                }
+
                 if (!(valido))
                 {
                     codigoContratoValido = false;
-                    break;
                 }
             }
 
@@ -29,8 +36,12 @@ namespace _01.ByteBank
 
         public Emprestimo(string codigoContrato)
         {
-            this.codigoContrato = codigoContrato;
-            Console.WriteLine($"Novo empréstimo com código: {codigoContrato}");
+            if (ValidarCodigo(codigoContrato))
+            {
+                this.codigoContrato = codigoContrato;
+                Console.WriteLine($"Novo empréstimo com código: {codigoContrato}");
+            }
+
         }
 
         public event PrazoMaximoEstouradoHandler OnPrazoMaximoEstourado;
