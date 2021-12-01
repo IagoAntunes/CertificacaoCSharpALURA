@@ -16,6 +16,8 @@ namespace _04.ByteBank
             GetFatorial(1);
             GetFatorial(0);
 
+
+
             //RelatorioClientes.ImprimirListagemClientes();
 
             //MenuCaixaEletronico menu = new MenuCaixaEletronico();
@@ -76,12 +78,15 @@ namespace _04.ByteBank
             //FATORIAL DE 0                      = 1 
 
             int fatorial = 1;
-            int fator = numero;
 
-            while (fator >= 1)
+            //while (fator >= 1)
+            //{
+            //    fatorial = fatorial * fator;
+            //    fator = fator - 1;
+            //}
+            for (int fator = numero; fator >= 1; fator --)
             {
-                fatorial = fatorial * fator;
-                fator = fator - 1;
+                fatorial *= fator;
             }
             System.Console.WriteLine($"fatorial de {numero} é {fatorial}");
 
