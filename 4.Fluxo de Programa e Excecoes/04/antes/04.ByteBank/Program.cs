@@ -9,12 +9,12 @@ namespace _04.ByteBank
     {
         static void Main(string[] args)
         {
-            GetFatorial(5);
-            GetFatorial(4);
-            GetFatorial(3);
-            GetFatorial(2);
-            GetFatorial(1);
-            GetFatorial(0);
+            //GetFatorial(5);
+            //GetFatorial(4);
+            //GetFatorial(3);
+            //GetFatorial(2);
+            //GetFatorial(1);
+            //GetFatorial(0);
 
 
 
@@ -23,6 +23,8 @@ namespace _04.ByteBank
             //MenuCaixaEletronico menu = new MenuCaixaEletronico();
             //menu.Executar();
             IList<Conta> contasEspeciais = GetContasEspeciais();
+
+            bool existe = ExisteContaComMaisDe50000();
         }
 
 
@@ -50,10 +52,19 @@ namespace _04.ByteBank
         private static bool ExisteContaComMaisDe50000()
         {
             IList<Cliente> clientes = GetClientes();
-
             //TAREFA: RETORNAR VERDADEIRO OU FALSO
             //INDICANDO SE EXISTE CONTA COM MAIS DE 50 MIL DE SALDO
-
+            
+            foreach(Cliente cliente in clientes)
+            {
+                foreach(Conta conta in cliente.Contas)
+                {
+                    if(conta.Saldo > 50000)
+                    {
+                        return true;
+                    }
+                }
+            }
             return false;
         }
 
@@ -131,3 +142,9 @@ namespace _04.ByteBank
         public IList<Conta> Contas { get; set; }
     }
 }
+/*04
+ * Iteração com For e Foreach
+ * Repetição por contadores: Substituindo While por For
+ * Repetição por varredura: Substituindo For por ForEach
+ * Saindo de um Laço Usando Break ou Early Return
+ */
