@@ -22,6 +22,11 @@ namespace _01.ByteBank
             emprestimo.CalcularJuros(8500, 6);
             emprestimo.CalcularJuros(11500, 4);
 
+            CaixaEletronico caixa = new CaixaEletronico();
+            caixa.Sacar(80);
+
+
+
             Console.ReadLine();
         }
 
@@ -76,3 +81,11 @@ namespace _01.ByteBank
         }
     }
 }
+/*01
+ * Fluxo de Programa If,Else,Switch
+ * Estrutura de decisões: as instruções If e Else
+ * Combinando e avaliando edxpressoes booleanas
+ * CLausula de Guarda
+ * Seletores: Substituindo instruções If e Else por switch
+ * Operadores
+ */
