@@ -14,14 +14,19 @@ namespace _01.ByteBank
             //conta.SacarDinheiro(150);
 
             Emprestimo emprestimo = new Emprestimo("aa123");
-
+            emprestimo.OnPrazoMaximoEstourado += Emprestimo_OnPrazoMaximoEstourado;
+            emprestimo.Prazo = 3;
+            emprestimo.Prazo = 7;
 
 
 
             Console.ReadLine();
         }
 
-
+        private static void Emprestimo_OnPrazoMaximoEstourado(object source, EventArgs e)
+        {
+            Console.WriteLine("Prazo Estourado");
+        }
 
         private static void TestesContaBancaria()
         {
