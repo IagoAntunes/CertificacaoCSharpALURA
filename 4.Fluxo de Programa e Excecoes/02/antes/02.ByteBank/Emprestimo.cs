@@ -95,12 +95,21 @@ namespace _02.ByteBank
             valorJuros = valor * taxaJuros * prazo;
             Console.WriteLine($"valorJuros: {valorJuros}");
 
+
+            GravarLog($"O valor calculado dos juros é:{valorJuros}");
             return valorJuros;
         }
 
         public void GravarLog(string mensagem)
         {
-            var arquivo = ARQUIVO_LOG_TESTE;
+            string arquivo = "";
+#if (DEBUG)
+            arquivo = ARQUIVO_LOG_TESTE;
+#else
+            
+            arquivo = ARQUIVO_LOG_PRODUCAO;
+#endif
+            //var arquivo = ARQUIVO_LOG_TESTE;;
 
             Directory.CreateDirectory(Path.GetDirectoryName(arquivo));
             using (var writer = new StreamWriter(arquivo, append: true))
