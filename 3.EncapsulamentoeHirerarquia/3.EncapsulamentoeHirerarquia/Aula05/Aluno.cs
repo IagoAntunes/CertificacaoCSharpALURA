@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3.EncapsulamentoeHirerarquia
 {
-    public class Aluno
+    public class Aluno : IComparable
     {
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
@@ -33,6 +33,28 @@ namespace _3.EncapsulamentoeHirerarquia
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Nome);
             hashCode = hashCode * -1521134295 + DataNascimento.GetHashCode();
             return hashCode;
+        }
+
+        public int CompareTo(object obj)
+        {
+            // 0 -> iguais     >0    -> obj atual vem depois   <0   -> Objeto atual vem antes
+            if(obj == null)
+            {
+                return 1;
+            }
+
+            Aluno outro = obj as Aluno;
+            if(outro == null)
+            {
+                throw new ArgumentException("Objeto não é um aluno.");
+            }
+
+            int resultado = this.DataNascimento.CompareTo(outro.DataNascimento);
+            if(resultado == 0)
+            {
+                resultado = this.Nome.CompareTo(outro.Nome);
+            }
+            return resultado;
         }
     }
 }

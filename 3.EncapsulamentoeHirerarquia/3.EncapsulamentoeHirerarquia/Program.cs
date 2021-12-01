@@ -30,6 +30,31 @@ namespace _3.EncapsulamentoeHirerarquia
             Console.WriteLine(aluno1.Equals(aluno2));
             Console.WriteLine(aluno1.Equals(aluno3));
 
+            Aluno aluno4 = new Aluno
+            {
+                Nome = "ANDRE DOS SANTOS",
+                DataNascimento = new DateTime(1970, 1, 1)
+            };
+            Aluno aluno5 = new Aluno
+            {
+                Nome = "Ana de Souza",
+                DataNascimento = new DateTime(1990, 1, 1)
+            };
+
+            List<Aluno> alunos = new List<Aluno>
+            {
+                aluno1,
+                aluno2,
+                aluno3,
+                aluno4,
+                aluno5
+            };
+            alunos.Sort();
+            foreach(var aluno in alunos)
+            {
+                Console.WriteLine(aluno);
+            }
+
 
             Console.ReadLine();
         }
@@ -98,7 +123,25 @@ namespace _3.EncapsulamentoeHirerarquia
     
         static void aula05()
         {
+            Aluno aluno1 = new Aluno()
+            {
+                Nome = "Jose da Silva",
+                DataNascimento = new DateTime(1990, 1, 1)
+            };
+            Aluno aluno2 = new Aluno()
+            {
+                Nome = "Jose da Silva",
+                DataNascimento = new DateTime(1995, 1, 1)
+            };
+            Aluno aluno3 = new Aluno()
+            {
+                Nome = "jose da Silva",
+                DataNascimento = new DateTime(1990, 1, 1)
+            };
 
+
+            Console.WriteLine(aluno1.Equals(aluno2));
+            Console.WriteLine(aluno1.Equals(aluno3));
         }
     }
 
@@ -138,4 +181,10 @@ namespace _3.EncapsulamentoeHirerarquia
  * -Extraindo a clase base a partir de membros em comum
  * Proibindo criação de instancias de classe com o modificador abstract
  * Poribindo criação de classes derivadas com o modificador sealed
+ */
+/*05
+ * Comparando identidade de objetos com o metodo Equals()
+ * Implementando os metodos Equals() e GetHashCode()
+ * Definindo a ordenação de objetos com os metodos IComparable.CompareTo()
+ * Conclusao
  */
