@@ -16,6 +16,11 @@ namespace _03.ByteBank
 
             RelatorioClientes.ImprimirListagemClientes();
 
+            MenuCaixaEletronico menu = new MenuCaixaEletronico();
+            menu.Executar();
+
+
+
 
         }
 
@@ -46,3 +51,8 @@ namespace _03.ByteBank
         }
     }
 }
+/*03
+ * Fluxo de Programa While e Do
+ * Repetindo instruções com While
+ * Avaliação de condições tardia com bloco Do While
+ */
