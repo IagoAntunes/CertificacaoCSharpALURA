@@ -21,6 +21,9 @@ namespace _02.ByteBank
             emprestimo.CalcularJuros(8500, 6);
             emprestimo.CalcularJuros(11500, 4);
 
+
+            emprestimo.Finalizar();
+
             Console.ReadLine();
         }
 
@@ -85,3 +88,9 @@ namespace _02.ByteBank
         }
     }
 }
+/*02
+ * Compilação Condicional
+ * Diretivas de compilação
+ * Simbolos de Compilação
+ * Criando Simbolos de Compilação
+ */
