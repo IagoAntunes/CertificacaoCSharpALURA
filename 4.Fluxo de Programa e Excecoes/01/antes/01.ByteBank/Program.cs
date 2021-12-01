@@ -18,7 +18,9 @@ namespace _01.ByteBank
             emprestimo.Prazo = 3;
             emprestimo.Prazo = 7;
 
-
+            emprestimo.CalcularJuros(600, 3);
+            emprestimo.CalcularJuros(8500, 6);
+            emprestimo.CalcularJuros(11500, 4);
 
             Console.ReadLine();
         }
