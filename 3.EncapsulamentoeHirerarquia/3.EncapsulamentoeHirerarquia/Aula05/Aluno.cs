@@ -35,7 +35,7 @@ namespace _3.EncapsulamentoeHirerarquia
             return hashCode;
         }
 
-        public int CompareTo(object obj)
+        public int CompareTo(object obj)//SORT para objeto
         {
             // 0 -> iguais     >0    -> obj atual vem depois   <0   -> Objeto atual vem antes
             if(obj == null)

@@ -214,3 +214,17 @@ namespace _05.ByteBank
     }
 
 }
+/*05Manipulação de Excecoes
+ * Realizando transferencia entre contas
+ * Capturando excecoes com try e catch
+ * excecao Base
+ * Lançando exceções especializadas
+ * criando exceç~~oes customizadas
+ */
+/*06
+ * Execoes om SQL Server e Rede
+ * Fazendo a transferencia bancaria com SQL Server
+ * Liberando recursos apos a ocorrencia de uma excecao
+ * Desfazendo Transação e Relançanddo Excecoes
+ * Capturando mais de um tipo de Excecao no Bloco Try Catch Finally
+ */

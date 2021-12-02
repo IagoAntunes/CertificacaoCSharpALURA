@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,6 +49,14 @@ namespace _3.EncapsulamentoeHirerarquia
                 aluno3,
                 aluno4,
                 aluno5
+            };
+            List<int> alunos2 = new List<int>
+            {
+                1,
+                2,
+                3,
+                4,
+                5
             };
             alunos.Sort();
             foreach(var aluno in alunos)
