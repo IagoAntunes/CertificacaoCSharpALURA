@@ -9,7 +9,8 @@ namespace _01._02.TiposDeReferencia
         {
             await Task.Delay(3000); //aguarda 3 segundos
 
-            GerarTiposValor();
+            //GerarTiposValor();
+            GerarTiposReferencia();
 
             Console.ReadKey();
         }
@@ -51,4 +52,17 @@ namespace _01._02.TiposDeReferencia
         public string Conclusao { get; set; }
     }
 }
-
+/*Gerenciamento de Memoria com Pilha
+ * Sao armazenados na pilha: tipos primitivos(int,bool,char)
+ * Empilhamento/desempilhamento de blocos de metodos na pilha
+ * Gerenciamento de memoria da pilha
+ * 
+ * Pilha X Heap
+ * -Variaveis como endereços(referencias)de memoria
+ * -Armazenamento no heap: tipos de referencia(strings,objetos,interfaces)
+ * -Objetos queficaram no Heap sem nenhuma referencisa sao candidatos ao descarte pelo coletor de Lixo
+ * 
+ * Visualizando consumo de memoria no visua lstudio com ferramentas de diagnostico
+ * -Comparação de consumo de memoria com tipso de valor x tipos de referencia
+ * Identificando inicio do trabalho do garbage collector na visualização da memoria do processo/
+ */
