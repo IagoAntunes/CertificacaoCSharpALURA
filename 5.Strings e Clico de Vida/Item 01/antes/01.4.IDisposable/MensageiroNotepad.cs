@@ -8,6 +8,8 @@ namespace _01._4.IDisposable_Finalizador
     class MensageiroNotepad : IDisposable
     {
         IntPtr ponteiroNotepad;
+        StreamWriter escritor = new StreamWriter("mensagens.txt");
+
         private bool disposedValue;
 
         [DllImport("user32.dll", EntryPoint = "FindWindowEx")]
@@ -17,6 +19,9 @@ namespace _01._4.IDisposable_Finalizador
 
         public void EnviarMensagem(string mensagem)
         {
+            escritor.WriteLine(mensagem);
+            escritor.Flush();   
+
             //Obtém os processos do Windows que estão rodando instâncias do Notepad
             Process[] notepads = Process.GetProcessesByName("notepad");
             if (notepads.Length == 0) return;
@@ -89,6 +94,7 @@ namespace _01._4.IDisposable_Finalizador
             {
                 if (disposing)
                 {
+                    escritor.Dispose();
                     // TODO: dispose managed state (managed objects)
                 }
 
