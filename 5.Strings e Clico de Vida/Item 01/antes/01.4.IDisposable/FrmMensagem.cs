@@ -15,6 +15,9 @@ namespace _01._4.IDisposable_Finalizador
         {
             MensageiroNotepad mensageiro = new MensageiroNotepad();
             mensageiro.EnviarMensagem(txtMensagem.Text);
+
+            mensageiro.Dispose();
+
         }
     }
 }

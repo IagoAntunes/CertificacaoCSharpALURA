@@ -20,3 +20,13 @@ namespace _01._4.IDisposable_Finalizador
         }
     }
 }
+/*02
+ * Coletando Lixo
+ * Finalizadores
+ * -Criando Finalizadores
+ * FInalizadores soa usados para liberar recursos nao gerenciados
+ * Finalizadores sao incovcados externamento pelo Garbage Collector
+ * Forçando o trabalho de descar do coletro de lixo com o metodo GC.Collect()
+ * O padrao Dispose
+ * -Implementando a interface IDisposable]
+ */
