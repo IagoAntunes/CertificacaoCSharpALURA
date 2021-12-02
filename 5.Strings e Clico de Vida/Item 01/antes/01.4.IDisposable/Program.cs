@@ -30,3 +30,15 @@ namespace _01._4.IDisposable_Finalizador
  * O padrao Dispose
  * -Implementando a interface IDisposable]
  */
+/* 03
+ * O padrao Dispose
+ * Liberando Recursos nao Gerenciados
+ * -Lidando com manipulador de janela do Notepad
+ * -Liberando recursos na ogerenciados
+ * Liberando Recursos Gerenciados
+ * -Implementando a interface IDisposable
+ * -Liberando recursos do objeto MensageiroNotepad com o metodo Dispose()
+ * -Testando (e falhando) na abertura de arquivo sucessivas vezes sem antes liberado os recursos
+ * A isntrução USing
+ * -Usando using como um açucar sintatico para o descarte de objetos
+ */
