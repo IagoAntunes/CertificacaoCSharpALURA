@@ -8,12 +8,13 @@ namespace _02._4.pesquisa
     internal class Pesquisa
     {
         private readonly Label txtPesquisa;
+        private readonly Label lblDocumento;
         private readonly List<string> parametros;
         private int indiceDe;
 
-        public Pesquisa(Label txtPesquisa, List<string> parametros)
+        public Pesquisa(Label lblDocumento, List<string> parametros)
         {
-            this.txtPesquisa = txtPesquisa;
+            this.lblDocumento = lblDocumento;
             this.parametros = parametros;
         }
 
@@ -50,7 +51,7 @@ namespace _02._4.pesquisa
             //txtPesquisa: caixa de texto do Windows Forms
             var textoBusca = parametros.FirstOrDefault();
 
-            bool contem = false; //implementar busca
+            bool contem = lblDocumento.Text.ToUpper().Contains(textoBusca.ToUpper());
 
             if (contem)
             {
@@ -66,7 +67,8 @@ namespace _02._4.pesquisa
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            bool comecaCom = false; //implementar busca
+            //bool comecaCom = lblDocumento.Text.StartsWith(textoBusca,true,System.Globalization.CultureInfo.CurrentCulture);
+            bool comecaCom = lblDocumento.Text.StartsWith(textoBusca,StringComparison.CurrentCultureIgnoreCase);
 
             if (comecaCom)
             {
@@ -82,7 +84,7 @@ namespace _02._4.pesquisa
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            var terminaCom = false; //implementar busca
+            var terminaCom = lblDocumento.Text.EndsWith(textoBusca,StringComparison.CurrentCultureIgnoreCase);
 
             if (terminaCom)
             {
@@ -99,6 +101,7 @@ namespace _02._4.pesquisa
             var textoBusca = parametros.FirstOrDefault();
 
             //indiceDe = ???; //implementar busca
+            indiceDe = lblDocumento.Text.IndexOf(textoBusca);
 
             if (indiceDe == -1)
             {
@@ -134,7 +137,11 @@ namespace _02._4.pesquisa
             //txtPesquisa.SelectionStart = ???
             //txtPesquisa.SelectionLength = ???
 
-            string trecho = ""; //implementar busca
+
+
+            string trecho = lblDocumento.Text.Substring(indiceInicial, comprimento);
+
+
 
             return "O trecho selecionado é: " + trecho;
         }
@@ -145,6 +152,7 @@ namespace _02._4.pesquisa
             var novoTexto = parametros[1];
 
             //txtPesquisa.Text = ??? implementar substituição
+            lblDocumento.Text = lblDocumento.Text.Replace(antigoTexto, novoTexto);
 
             return "Trecho substituído com sucesso.";
         }
