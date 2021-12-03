@@ -19,6 +19,9 @@ namespace _01._05
                 serializer.WriteObject(fileStream, loja);
             }
 
+
+
+            Console.ReadLine();
         }
 
         private static LojaDeFilmes ObterDados()
@@ -123,3 +126,10 @@ namespace _01._05
         }
     }
 }
+/*03
+ * Serialização Binaria,Personalizada e com contrato
+ * -Serializaçao binaria: Tirando um retrato de um objeto
+ * O caminho de volta a desserialização binaria
+ * Controlando a serialização com contrato de dados
+ * Controlando a serilização com a serilização personalizada
+ */
