@@ -35,7 +35,7 @@ namespace _01._03
             using (var stringWriter = new StringWriter())
             {
                 xmlSerializer.Serialize(stringWriter,dados);
-                Console.WriteLine(stringWriter);
+                //Console.WriteLine(stringWriter);
             }
             using (var fileStream = new FileStream("Loja.xml", FileMode.Create, FileAccess.Write))
             {
@@ -43,11 +43,21 @@ namespace _01._03
 
             }
 
-
-
             //AQUI VEM O CÓDIGO DO SEGUNDO SISTEMA
 
+            var xmlSerializer2 = new XmlSerializer(typeof(LojaDeFilmes));
 
+            LojaDeFilmes lojaDeFilmes2;
+            using (var fileStream02 = new FileStream("Loja.xml",FileMode.Open, FileAccess.Read))
+            {
+
+                lojaDeFilmes2 = (LojaDeFilmes)xmlSerializer2.Deserialize(fileStream02);
+
+            }
+            foreach (var filme in lojaDeFilmes2.Filmes)
+            {
+                Console.WriteLine(filme.Titulo);
+            }
             Console.ReadKey();
 
         }
