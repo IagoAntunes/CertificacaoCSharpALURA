@@ -35,9 +35,9 @@ namespace _01._03
             using (var stringWriter = new StringWriter())
             {
                 xmlSerializer.Serialize(stringWriter,dados);
-                //Console.WriteLine(stringWriter);
+                Console.WriteLine(stringWriter);
             }
-            using (var fileStream = new FileStream("Loja.xml", FileMode.Create, FileAccess.Write))
+            using (var fileStream = new FileStream("MovieStore.xml", FileMode.Create, FileAccess.Write))
             {
                 xmlSerializer.Serialize(fileStream,dados);
 
@@ -45,18 +45,18 @@ namespace _01._03
 
             //AQUI VEM O CÓDIGO DO SEGUNDO SISTEMA
 
-            var xmlSerializer2 = new XmlSerializer(typeof(LojaDeFilmes));
+            var xmlSerializer2 = new XmlSerializer(typeof(MovieStore));
 
-            LojaDeFilmes lojaDeFilmes2;
-            using (var fileStream02 = new FileStream("Loja.xml",FileMode.Open, FileAccess.Read))
+            MovieStore movieStore;
+            using (var fileStream02 = new FileStream("MovieStore.xml",FileMode.Open, FileAccess.Read))
             {
 
-                lojaDeFilmes2 = (LojaDeFilmes)xmlSerializer2.Deserialize(fileStream02);
+                movieStore = (MovieStore)xmlSerializer2.Deserialize(fileStream02);
 
             }
-            foreach (var filme in lojaDeFilmes2.Filmes)
+            foreach (var movie in movieStore.Movies)
             {
-                Console.WriteLine(filme.Titulo);
+                Console.WriteLine(movie.Title);
             }
             Console.ReadKey();
 
@@ -164,3 +164,10 @@ namespace _01._03
         }
     }
 }
+/*01
+ * Serialização com XML
+ * -O processeo de serialização e desserialização
+ * -Transferindo dados de objetos para documentos XML
+ * -Convertendo strings e arquivos XML em instancias de classes
+ * - Mapeando classes , propriedades e campso em elementos e atributos XML
+ */
