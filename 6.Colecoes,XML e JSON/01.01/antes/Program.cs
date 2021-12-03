@@ -30,6 +30,7 @@ namespace _01._03
 
             //INÍCIO DO CÓDIGO DO PRIMEIRO SISTEMA
             var dados = ObterDados();
+
             var xmlSerializer = new XmlSerializer(typeof(LojaDeFilmes));
 
             using (var stringWriter = new StringWriter())

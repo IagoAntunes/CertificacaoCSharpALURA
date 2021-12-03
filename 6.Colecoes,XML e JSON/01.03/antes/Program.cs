@@ -17,6 +17,20 @@ namespace _01._03
     {
         static void Main(string[] args)
         {
+            var loja = ObterDados();
+
+            var binaryFormatter = new BinaryFormatter();
+
+            using (var fileStream = new FileStream("Loja.bin", FileMode.Create, FileAccess.Write))
+            {
+                binaryFormatter.Serialize(fileStream, loja);
+
+            };
+
+
+
+
+            Console.ReadLine();
         }
 
         private static LojaDeFilmes ObterDados()

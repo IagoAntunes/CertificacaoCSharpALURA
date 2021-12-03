@@ -37,7 +37,6 @@ namespace _01._02
                 Console.WriteLine(filme.Titulo);
             }
 
-
             //2) usando Json.NET (NewtonSoft)
             //Console.WriteLine("2) usando Json.NET (NewtonSoft)");
             json = JsonConvert.SerializeObject(loja);
