@@ -54,6 +54,14 @@ namespace _01._02
                 Console.WriteLine(filme.Titulo);
             }
 
+            MovieStore movieStore = JsonConvert.DeserializeObject<MovieStore>(json);
+            foreach(var filme in movieStore.Movies)
+            {
+                Console.WriteLine(filme.Title);
+            }
+
+
+
             Console.ReadKey();
         }
 
@@ -159,3 +167,12 @@ namespace _01._02
         }
     }
 }
+/*02
+ * Serialização com JSON
+ * -JSON: Java Script Object Notation
+ * -Diferenças entre documentos XML e o formato JSON
+ * -Trabalhando com JavaScriptSerializer
+ * -Convertendo formato JSON em objetos
+ * -Serialização com NewtonSoft JSON
+ * - Mapeando Objetos para serialização JSON
+ */
