@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace _01._02
 {
@@ -14,6 +16,17 @@ namespace _01._02
         static void Main(string[] args)
         {
             //SERIALIZAÇÃO JSON
+
+            var loja = ObterDados();
+
+            var javaScriptSerializer = new JavaScriptSerializer();
+            var json = javaScriptSerializer.Serialize(loja);
+            Console.WriteLine(json);
+
+            using(var streamWriter = new StreamWriter("Loja.json"))
+            {
+                streamWriter.Write(json);
+            }
 
             //1) usando JavaScriptSerializer
             Console.WriteLine("1) usando JavaScriptSerializer");
