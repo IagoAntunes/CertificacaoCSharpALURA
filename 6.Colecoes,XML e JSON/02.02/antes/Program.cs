@@ -73,9 +73,11 @@ namespace _02._02
             Console.WriteLine("Tamanho da lista: " + cronologia.Count);
             Console.WriteLine("Capacidade da lista: " + cronologia.Capacity);
             ///TAREFA: inserir Rogue One antes de Uma Nova Esperança
-
+            cronologia.Insert(cronologia.IndexOf(esperanca)-1,rogue);
+            Imprimir(cronologia);
             ///TAREFA: adicionar O Último Jedi ao final da cronologia
-
+            cronologia.Add(ultimo);
+            Imprimir(cronologia);
             ///TAREFA: exibir a cronologia inversa
 
             ///TAREFA: voltar a cronologia à ordem original
