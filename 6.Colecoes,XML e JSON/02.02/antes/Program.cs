@@ -98,13 +98,23 @@ namespace _02._02
             ///TAREFA: exibir último filme da cronologia
 
             ///TAREFA: exibir filmes em ordem alfabética
-
+            var ordemAlfabetica = new List<Filme>(filmesComAtores);
+            ordemAlfabetica.Sort();
+            Imprimir(ordemAlfabetica);
             ///TAREFA: exibir filmes em ordem de lançamento
-
+            var ordemLancamento = new List<Filme>(filmesComAtores);
+            ordemLancamento.Sort((filme1,filme2) => filme1.Ano.CompareTo(filme2.Ano));
+            Imprimir(ordemLancamento);
             ///TAREFA: exibir filmes da trilogia inicial (posições 4, 5 e 6)
+            var trilogiaInicial = new Filme[3];
+            ordemLancamento.CopyTo(3, trilogiaInicial, 0, 3);
+            Imprimir(trilogiaInicial);
+
+
+
         }
 
-        private static void Imprimir(List<Filme> cronologia)
+        private static void Imprimir(IEnumerable<Filme> cronologia)
         {
             foreach (var filme in cronologia)
             {
@@ -113,7 +123,7 @@ namespace _02._02
         }
     }
 
-    public class Filme
+    public class Filme : IComparable
     {
         public Filme(string titulo, int ano)
         {
@@ -123,6 +133,22 @@ namespace _02._02
 
         public string Titulo { get; set; }
         public int Ano { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            // igual->0      atualMenor-> negativo   
+            Filme esta = this;
+            Filme outro = obj as Filme;
+
+            if(outro == null)
+            {
+                return 1;
+            }
+
+
+
+            return esta.Titulo.CompareTo(outro.Titulo);
+        }
 
         public override string ToString()
         {
