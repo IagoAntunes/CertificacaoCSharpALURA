@@ -36,29 +36,42 @@ namespace _02._02
             var ultimo = new Filme("Episódio VIII: Os Últimos Jedi", 2017);
 
             ///TAREFA: criar uma coleção vazia, que irá crescer aos poucos
-
+            List<Filme> cronologia = new List<Filme>();
             ///TAREFA: checar a capacidade da lista
-
+            Console.WriteLine("Tamanho da lista: " + cronologia.Count);
+            Console.WriteLine("Capacidade da lista: " + cronologia.Capacity);
             ///TAREFA: adicionar o filme "Episódio IV -Uma nova esperança"
-
+            cronologia.Add(esperanca);
             ///TAREFA: checar novamente a capacidade da lista
-
+            Console.WriteLine("Tamanho da lista: " + cronologia.Count);
+            Console.WriteLine("Capacidade da lista: " + cronologia.Capacity);
             ///TAREFA: Adicionar no final: Império Contra Ataca e Retorno de Jedi
-
+            //cronologia.Add(imperio);
+            //cronologia.Add(retorno);
+            cronologia.AddRange(new List<Filme> { imperio, retorno });
             ///TAREFA: Declarar a lista com inicialização simplificada
-
+            cronologia = new List<Filme> { esperanca, imperio, retorno };
             ///TAREFA: checar novamente a capacidade da lista
-
+            Console.WriteLine("Tamanho da lista: " + cronologia.Count);
+            Console.WriteLine("Capacidade da lista: " + cronologia.Capacity);
             ///TAREFA: imprimir a cronologia
-
+            Imprimir(cronologia);
             ///TAREFA: inserir Ameaça Fantasma no início da cronologia
-
+            int posicao = 1;
+            cronologia.Insert(posicao - 1, ameaca);
+            Imprimir(cronologia);
             ///TAREFA: Inserir na segunda posição: Ataque dos Clones, Guerra dos Clone, Vingança dos Sith
-
-            ///TAREFA: checar novamente a capacidade da lista
+            posicao = 2;
+            var novosFilmes = new [] { ataque, guerraClones, vinganca,rebels };
+            cronologia.InsertRange(posicao - 1,novosFilmes);
+            Imprimir(cronologia);
 
             ///TAREFA: adicionar Despertar da Força no fim da cronologia
-
+            cronologia.Add(despertar);
+            Imprimir(cronologia);
+            ///TAREFA: checar novamente a capacidade da lista
+            Console.WriteLine("Tamanho da lista: " + cronologia.Count);
+            Console.WriteLine("Capacidade da lista: " + cronologia.Capacity);
             ///TAREFA: inserir Rogue One antes de Uma Nova Esperança
 
             ///TAREFA: adicionar O Último Jedi ao final da cronologia
@@ -80,6 +93,14 @@ namespace _02._02
             ///TAREFA: exibir filmes em ordem de lançamento
 
             ///TAREFA: exibir filmes da trilogia inicial (posições 4, 5 e 6)
+        }
+
+        private static void Imprimir(List<Filme> cronologia)
+        {
+            foreach (var filme in cronologia)
+            {
+                Console.WriteLine(filme);
+            }
         }
     }
 
