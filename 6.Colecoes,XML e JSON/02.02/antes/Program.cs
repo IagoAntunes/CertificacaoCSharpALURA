@@ -79,13 +79,20 @@ namespace _02._02
             cronologia.Add(ultimo);
             Imprimir(cronologia);
             ///TAREFA: exibir a cronologia inversa
-
+            cronologia.Reverse();
+            Imprimir(cronologia);
             ///TAREFA: voltar a cronologia à ordem original
-
+            cronologia.Reverse();
+            Imprimir(cronologia);
             ///TAREFA: obter lista de filmes só com atores (sem rebels e guerra dos clones)
-
+            var filmesComAtores = new List<Filme>(cronologia);
+            filmesComAtores.RemoveAt(filmesComAtores.IndexOf(rebels));
+            filmesComAtores.Remove(guerraClones);
+            Imprimir(filmesComAtores);
             ///TAREFA: obter trilogia original (filmes lançados até 1983)
-
+            var trilogiaOriginal = new List<Filme>(cronologia);
+            trilogiaOriginal.RemoveAll((filme) => filme.Ano > 1983);
+            Imprimir(trilogiaOriginal);
             ///TAREFA: exibir primeiro filme da cronologia
 
             ///TAREFA: exibir último filme da cronologia
