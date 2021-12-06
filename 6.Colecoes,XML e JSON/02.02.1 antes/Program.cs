@@ -7,7 +7,22 @@ namespace _02._02._1
     {
         static void Main(string[] args)
         {
+            var loja = new LojaDeFilmes();
 
+            foreach (var filme in loja.Filmes)
+            {
+                Console.WriteLine(filme);
+            }
+            //loja.Filmes[0].Titulo = "Evitar";
+
+            //loja.Filmes = new List<Filme>();
+            //loja.Filmes.sort();
+            //loja.Filmes.RemoveAt(0);
+            //loja.Filmes.Add(new Filme(new Diretor("Ze ninguem", 3),"Qualquer","2019"));
+            foreach (var filme in loja.Filmes)
+            {
+                Console.WriteLine(filme);
+            }
         }
 
         private static LojaDeFilmes GetLoja()
@@ -26,7 +41,7 @@ namespace _02._02._1
                     new Diretor("Gareth Edwards",  3),
                     new Diretor("Justin Kurzel",  6)
                 },
-                Filmes = new List<Filme> {
+                filmes = new List<Filme> {
                     new Filme (
                         new Diretor ( "James Cameron", 5 ),
                         "Avatar",
@@ -113,3 +128,12 @@ namespace _02._02._1
 
     }
 }
+/*05
+ * Listas
+ * -Lista, o Array dinamico
+ * -Adicionando e inserindo na lista
+ * -Reovendo elementos e usando predicados
+ * -Comaprando objetos e ordenando lsitas
+ * -Lista,array,foreach e a interface IEnumerable
+ * Protegendo dados com Lista Somente-Leitura
+ */

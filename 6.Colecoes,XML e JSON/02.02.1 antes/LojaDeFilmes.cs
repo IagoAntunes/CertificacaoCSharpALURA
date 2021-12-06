@@ -17,13 +17,9 @@ namespace _02._02._1
         }
 
         private List<Filme> filmes;
-        public List<Filme> Filmes
+        public IReadOnlyCollection<Filme> Filmes
         {
-            get { return filmes; }
-            set
-            {
-                filmes = value;
-            }
+            get { return new ReadOnlyCollection<Filme>(filmes); }
         }
 
         public LojaDeFilmes()
@@ -158,7 +154,7 @@ namespace _02._02._1
         }
 
         public Diretor Diretor { get; }
-        public string Titulo { get; }
+        public string Titulo { get;  }
         public string Ano { get; }
 
         public override string ToString()
