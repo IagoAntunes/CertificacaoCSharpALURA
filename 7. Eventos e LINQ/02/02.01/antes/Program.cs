@@ -38,10 +38,22 @@ namespace _02_01
                     Diretor = f.Diretor.Nome
                 };
 
-            Imprimir(consulta2);
-            /*  
-             * 
-             */
+            var consulta3 =
+                from f in filmes
+                where f.Diretor.Nome == "Tim Burton"
+                select new //Objeto Anonimo >:c
+                {
+                    f.Titulo,
+                    Diretor = f.Diretor.Nome
+                };
+
+            Console.WriteLine($"{"Titulo",-40} {"Diretor",-20}");
+            Console.WriteLine(new string('=', 64));
+
+            foreach (var filme in consulta3)
+            {
+                Console.WriteLine($"{filme.Titulo,-40} {filme.Diretor,-20}");
+            }
 
             Console.ReadKey();
         }
@@ -67,6 +79,7 @@ namespace _02_01
             }
         }
 
+        
         private static List<Diretor> GetDiretores()
         {
             return new List<Diretor>
