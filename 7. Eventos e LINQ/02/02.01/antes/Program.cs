@@ -20,10 +20,21 @@ namespace _02_01
             filmes.Add(novoFilme);
             Imprimir(filmes);
 
+            /*SELECT f.Nome,
+             * FROM filmes as f
+             * WHERE f.Diretor = "Tim Burton"
+             */
+            var consulta =
+                from f in filmes
+                select f;
+
+            Imprimir(consulta);
+
+
             Console.ReadKey();
         }
 
-        private static void Imprimir(List<Filme> filmes)
+        private static void Imprimir(IEnumerable<Filme> filmes)
         {
             Console.WriteLine($"{"Titulo",-40} {"Diretor",-20} {"Ano",4}");
             Console.WriteLine(new string('=', 64));
