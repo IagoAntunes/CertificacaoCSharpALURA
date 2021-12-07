@@ -26,6 +26,7 @@ namespace _02_01
              */
             var consulta =
                 from f in filmes
+                where f.Diretor.Nome == "Tim Burton"
                 select f;
 
             Imprimir(consulta);
