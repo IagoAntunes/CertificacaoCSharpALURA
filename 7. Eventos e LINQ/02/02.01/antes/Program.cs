@@ -30,7 +30,12 @@ namespace _02_01
                 select f;
 
             Imprimir(consulta);
-
+            /*var teste =
+             * from a in atletas
+             * where a.CodigoPais == "JAM"
+             * select a;
+             * 
+             */
 
             Console.ReadKey();
         }
@@ -143,3 +148,11 @@ namespace _02_01
         public int Minutos { get; set; }
     }
 }
+/*05
+ * Consultando e filtrando dados com LINQ
+ * -Criando o relatoro de filmes
+ * -Comparando consulta SQL com consulta LINQ
+ * -Primeira Consulta LINQ com FROM e SELECT
+ * -Obtendo valores de uma fonte de dados com o operador FROM
+ * -Filtrando uma consulta com WHERE
+ */
