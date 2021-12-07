@@ -217,3 +217,10 @@ namespace _02_01
  * -Obtendo valores de uma fonte de dados com o operador FROM
  * -Filtrando uma consulta com WHERE
  */
+/*06
+ * Projeção de Dados
+ * -Selecionando Dados do Resultado com SELECT
+ * Modificando o objeto de resultado de uma consulta
+ * -Retornando objetos anonimos com LINQ
+ * -Associando Fontes de dados com LIN
+ */
