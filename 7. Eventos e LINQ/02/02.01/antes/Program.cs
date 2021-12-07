@@ -10,6 +10,7 @@ namespace _02_01
         static void Main(string[] args)
         {
             var filmes = GetFilmes();
+            var diretores = GetDiretores(); 
             var novoFilme = new Filme
             {
                 Titulo = "A fantastica fabrica de chocolate",
@@ -54,6 +55,32 @@ namespace _02_01
             {
                 Console.WriteLine($"{filme.Titulo,-40} {filme.Diretor,-20}");
             }
+
+            /*SELECT f.Nome AS Titulo,d.Nome AS Diretor
+             * FROM filmes as f
+             * INNER JOIN diretores AS d
+             * on d.Id = f.DiretorId
+             * WHERE d.Nome = "Tim Burton"
+             */
+            var consulta4 =
+            from f in filmes
+            join d in diretores
+                on f.DiretorId equals d.Id
+            where f.Diretor.Nome == "Tim Burton"
+            select new //Objeto Anonimo >:c
+            {
+                f.Titulo,
+                Diretor = d.Nome
+            };
+            Console.WriteLine($"{"Titulo",-40} {"Diretor",-20}");
+            Console.WriteLine(new string('=', 64));
+
+            foreach (var filme in consulta4)
+            {
+                Console.WriteLine($"{filme.Titulo,-40} {filme.Diretor,-20}");
+            }
+
+
 
             Console.ReadKey();
         }
