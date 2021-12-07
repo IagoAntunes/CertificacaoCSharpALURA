@@ -79,9 +79,28 @@ namespace _02_01
             {
                 Console.WriteLine($"{filme.Titulo,-40} {filme.Diretor,-20}");
             }
+            /*SELECT f.Nome AS Titulo,d.Nome AS Diretor, Count(*) AS quantidade
+              * FROM filmes as f
+              * INNER JOIN diretores AS d
+              * on d.Id = f.DiretorId
+              * GROUP BY d.Id
+             */
+            var consulta5 =
+            from f in filmes
+            join d in diretores
+                on f.DiretorId equals d.Id
+            group d by d
+                into agrupado
+            select new //Objeto Anonimo >:c
+            {
+                Diretor = agrupado.Key,
+                Quantidade = agrupado.Count()
+            };
 
-
-
+            foreach (var item in consulta5)
+            {
+                Console.WriteLine($"{item.Diretor.Nome}\t{item.Quantidade}");
+            }
             Console.ReadKey();
         }
 
@@ -222,5 +241,5 @@ namespace _02_01
  * -Selecionando Dados do Resultado com SELECT
  * Modificando o objeto de resultado de uma consulta
  * -Retornando objetos anonimos com LINQ
- * -Associando Fontes de dados com LIN
+ * -Associando Fontes de dados com LINQ
  */
