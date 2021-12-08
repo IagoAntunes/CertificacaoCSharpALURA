@@ -5,7 +5,7 @@ namespace Listings
 {
     class Item_00 //Streams
     {
-        static void Main(string[] args)
+        static void xMain(string[] args)
         {
             //TAREFAS:
             //1. ABRIR O ARQUIVO Diretores.txt
@@ -28,8 +28,8 @@ namespace Listings
             //ABSOLUTO RELATIVO =-posicao inicial do arqv BEGIN
 
 
-            //fluxoDeArquivo.Seek(4, SeekOrigin.Begin);
-            fluxoDeArquivo.Position = 2;
+            fluxoDeArquivo.Seek(4, SeekOrigin.Begin);
+            //fluxoDeArquivo.Position = 2;
 
             //SEGUNDA LEITURA
             fluxoDeArquivo.Read(array, posicao, tamanho);
