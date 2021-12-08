@@ -7,7 +7,7 @@ namespace Listings
 {
     class Item_02 //FileStream and IDisposable
     {
-        static void Main(string[] args)
+        static void XIIMain(string[] args)
         {
             // GRAVANDO UM ARQUIVO
 
