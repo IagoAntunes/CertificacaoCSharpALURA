@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace _02_05
@@ -22,6 +23,21 @@ namespace _02_05
                     "<Minutos>162</Minutos>" +
                 "</Filme>" +
             "</Filmes>";
+
+            //XmlDocument documento = new XmlDocument();
+            //documento.LoadXml(xml);
+
+            XDocument documento = XDocument.Parse(xml);
+
+            IEnumerable<XElement> consulta = 
+                from f in documento.Descendants("Filme")
+                select f;
+
+            foreach (var item in consulta)
+            {
+                Console.WriteLine(item.Element("Diretor").FirstNode);
+                Console.WriteLine(item.Element("Titulo").FirstNode);
+            }
 
             Console.ReadKey();
         }
