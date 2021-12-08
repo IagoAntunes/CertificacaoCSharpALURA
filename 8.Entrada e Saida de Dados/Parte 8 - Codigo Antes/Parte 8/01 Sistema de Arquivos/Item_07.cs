@@ -6,7 +6,7 @@ namespace Listings
     class Item_07 //Informações do drive
     {
         private const int KILOBYTES = 1024;
-        static void Main(string[] args)
+        static void XVIIMain(string[] args)
         {
             //TAREFA:
             //=======

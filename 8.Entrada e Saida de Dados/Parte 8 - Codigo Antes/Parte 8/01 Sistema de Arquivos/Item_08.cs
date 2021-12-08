@@ -7,9 +7,11 @@ namespace Listings
 {
     class Item_08 //Informações de arquivo
     {
-        static void XMain(string[] args)
+        private const string caminho = "Arquivo.txt";
+
+        static void Main(string[] args)
         {
-            //TAREFA:
+            //TAREFA: OBTER INFORMAÇÕES EM UM ARQUIVO
             //1. Gravar um texto em Arquivo.txt
             //2. Obter informações desse arquivo:
             //      Nome
@@ -21,6 +23,29 @@ namespace Listings
             //      Verificar os atributos novamente
             //      Remover atributo somente-leitura
             //      Verificar os atributos novamente
+
+            File.WriteAllText(caminho, "Texto Inicial do arquivo");
+
+            FileInfo info = new FileInfo(caminho);
+
+            Console.WriteLine("Nome: {0}",info.Name);
+            Console.WriteLine("Caminho completo: {0}",info.FullName);
+            Console.WriteLine("Ultimo acesso: {0}",info.LastAccessTime);
+            Console.WriteLine("Tamanho arquivo: {0} bytes",info.Length);
+            Console.WriteLine("Atributos: {0}",info.Attributes);
+            //info.Attributes = FileAttributes.ReadOnly;//zera todos outros
+            info.Attributes = info.Attributes | FileAttributes.ReadOnly;
+            Console.WriteLine("Atributos: {0}", info.Attributes);
+            info.Attributes = info.Attributes & ~FileAttributes.ReadOnly;
+            Console.WriteLine("Atributos: {0}", info.Attributes);
+
+
         }
     }
 }
+/*03
+ * Obter informações de drive
+ * A classe DriveInfo
+ * Obter e manipular atributos de arquivo
+ * FileInfo e FileAttributes
+ */
