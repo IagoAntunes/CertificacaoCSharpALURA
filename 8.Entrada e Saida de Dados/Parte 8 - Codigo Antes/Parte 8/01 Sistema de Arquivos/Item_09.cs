@@ -7,7 +7,7 @@ namespace Listings
 {
     class Item_09 //A Classe Directory
     {
-        static void Main(string[] args)
+        static void XMain(string[] args)
         {
             //TAREFA:
             //Criar um novo diretório
