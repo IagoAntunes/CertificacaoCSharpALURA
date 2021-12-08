@@ -6,7 +6,7 @@ namespace Listings
 {
     class Item_01 //Usando o FileStream
     {
-        static void Main(string[] args)
+        static void XIMain(string[] args)
         {
             //Gravando um arquivo
 
