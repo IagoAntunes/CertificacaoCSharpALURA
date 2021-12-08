@@ -7,7 +7,7 @@ namespace Listings
 {
     class Item_11 //Trabalhando com caminhos
     {
-        static void Main(string[] args)
+        static void XMain(string[] args)
         {
             //TAREFAS:
             //Descobrir o caminho da pasta "Meus Documentos"
