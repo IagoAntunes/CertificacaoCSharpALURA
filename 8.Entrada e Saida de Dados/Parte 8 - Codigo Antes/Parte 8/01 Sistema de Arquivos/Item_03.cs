@@ -7,7 +7,7 @@ namespace Listings
 {
     class Item_03 //StreamWriter and StreamReader
     {
-        static void Main(string[] args)
+        static void XIIIMain(string[] args)
         {
             //TAREFA: Usar FileStream dá muito trabalho...
             //        Não podemos usar algo mais simples??
