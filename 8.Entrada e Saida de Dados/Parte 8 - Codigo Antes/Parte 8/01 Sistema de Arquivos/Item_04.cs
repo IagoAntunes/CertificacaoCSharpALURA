@@ -8,7 +8,7 @@ namespace Listings
 {
     class Item_04 //Trabalhando com arquivos comprimidos
     {
-        static void Main(string[] args)
+        static void XIVMain(string[] args)
         {
             //Usar arquivo compactado Texto.zip no lugar do arquivo saida.txt
 
