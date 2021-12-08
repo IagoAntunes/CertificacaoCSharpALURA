@@ -9,7 +9,7 @@ namespace Listings
     {
         private const string caminho = "Arquivo.txt";
 
-        static void Main(string[] args)
+        static void IIXMain(string[] args)
         {
             //TAREFA: OBTER INFORMAÇÕES EM UM ARQUIVO
             //1. Gravar um texto em Arquivo.txt
@@ -38,8 +38,6 @@ namespace Listings
             Console.WriteLine("Atributos: {0}", info.Attributes);
             info.Attributes = info.Attributes & ~FileAttributes.ReadOnly;
             Console.WriteLine("Atributos: {0}", info.Attributes);
-
-
         }
     }
 }
