@@ -38,8 +38,67 @@ namespace _02_05
                 Console.WriteLine(item.Element("Diretor").FirstNode);
                 Console.WriteLine(item.Element("Titulo").FirstNode);
             }
+            Console.WriteLine();//----
+
+            //IEnumerable<XElement> consulta2 =
+            //from f in documento.Descendants("Filme")
+            //where f.Element("Diretor").FirstNode.ToString() == "James Cameron"
+            //select f;
+            IEnumerable<XElement> consulta2 =
+            from f in documento.Descendants("Filme")
+            where (string)f.Element("Diretor") == "James Cameron"
+            select f;
+
+            foreach (var item in consulta2)
+            {
+                Console.WriteLine((string)item.Element("Diretor"));
+                Console.WriteLine((string)item.Element("Titulo"));
+            }
+            Console.WriteLine();//----
+            IEnumerable<XElement> consulta3 =
+            documento.Descendants("Filme")
+            .Where(elemento => (string)elemento.Element("Diretor") == "James Cameron");
+
+            foreach (var item in consulta3)
+            {
+                Console.WriteLine((string)item.Element("Diretor"));
+                Console.WriteLine((string)item.Element("Titulo"));
+            }
+
+            Console.WriteLine();//-----
+
+            XElement pulpFiction =
+                consulta.Where(filme => (string)filme.Element("Titulo") == "Pulp Fiction").SingleOrDefault();
+
+            if (pulpFiction != null)
+            {
+                pulpFiction.Add(new XElement("Genero", "Drama"));
+            }
+            XElement avatar =
+                consulta.Where(filme => (string)filme.Element("Titulo") == "Avatar").SingleOrDefault();
+
+            avatar.Add(new XElement("Genero", "Ficcao Cientifica"));
+
+            foreach (var item in consulta)
+            {
+                Console.WriteLine((string)item.Element("Diretor"));
+                Console.WriteLine((string)item.Element("Titulo"));
+                Console.WriteLine((string)item.Element("Genero"));
+            }
+
 
             Console.ReadKey();
         }
     }
 }
+
+/*09
+ * Consulta com XML
+ * Consultando XML com LINQ
+ * Ler,filtrar,criar e modificar estruturas de dados usando LINQ para XML
+ * Ler XML com LINQ para XML XDocument
+ * Filtrar dados XML com o LINQ para XML
+ * LINQ to XML com sintaxe de Metodo
+ * Obtendo um unico elemento e modificando XML
+ * Conclusao
+ */
