@@ -118,6 +118,29 @@ namespace _02_01
                     $"\t{item.Max}" +
                     $"\t{item.Media}");
             }
+
+
+            int tamanhoPagina = 4;
+            int pagina = 0;
+            while (pagina*tamanhoPagina < filmes.Count)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Pagina: " + (pagina + 1));
+                Console.WriteLine();
+
+                var relatorio =
+                    from f in filmes
+                    .Skip(pagina * tamanhoPagina)
+                    .Take(tamanhoPagina)
+                    select f;
+
+                Imprimir(relatorio);
+                pagina++;
+            }
+
+
+
+
             Console.ReadKey();
         }
 
