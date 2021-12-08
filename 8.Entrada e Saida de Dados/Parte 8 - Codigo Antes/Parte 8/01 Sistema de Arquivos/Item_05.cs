@@ -7,7 +7,7 @@ namespace Listings
 {
     class Item_05 //A classe File
     {
-        static void Main(string[] args)
+        static void XVMain(string[] args)
         {
             //TAREFAS: GRAVAR E LER DADOS DE UM ARQUIVO USANDO A CLASSE File
 
