@@ -10,13 +10,14 @@ namespace _02_01
         static void Main(string[] args)
         {
             var filmes = GetFilmes();
-            var diretores = GetDiretores(); 
+            var diretores = GetDiretores();
             var novoFilme = new Filme
             {
                 Titulo = "A fantastica fabrica de chocolate",
                 Ano = 2005,
                 Diretor = new Diretor { Id = 3, Nome = "Tim Burton" },
-                DiretorId = 3
+                DiretorId = 3,
+                Minutos = 115
             };
             filmes.Add(novoFilme);
             Imprimir(filmes);
@@ -89,17 +90,33 @@ namespace _02_01
             from f in filmes
             join d in diretores
                 on f.DiretorId equals d.Id
-            group d by d
+            group f by d
                 into agrupado
             select new //Objeto Anonimo >:c
             {
                 Diretor = agrupado.Key,
-                Quantidade = agrupado.Count()
+                Quantidade = agrupado.Count(),
+                Total = agrupado.Sum(f => f.Minutos),
+                Min = agrupado.Min(f => f.Minutos),
+                Max = agrupado.Max(f => f.Minutos),
+                Media = (int)agrupado.Average(f => f.Minutos)
             };
-
+                  Console.WriteLine(
+                    $"{"Nome",-30}" +
+                    $"\t{"Qtd"}" +
+                    $"\t{"Total"}" +
+                    $"\t{"Min"}" +
+                    $"\t{"Max"}" +
+                    $"\t{"Media"}");
             foreach (var item in consulta5)
             {
-                Console.WriteLine($"{item.Diretor.Nome}\t{item.Quantidade}");
+                Console.WriteLine(
+                    $"{item.Diretor.Nome,-30}" +
+                    $"\t{item.Quantidade}" +
+                    $"\t{item.Total}" +
+                    $"\t{item.Min}" +
+                    $"\t{item.Max}" +
+                    $"\t{item.Media}");
             }
             Console.ReadKey();
         }
@@ -242,4 +259,10 @@ namespace _02_01
  * Modificando o objeto de resultado de uma consulta
  * -Retornando objetos anonimos com LINQ
  * -Associando Fontes de dados com LINQ
+ */
+/*07
+ * Agrupamento e A funções de agregação
+ * O operador group by
+ * Agregação com Soma,Minimo,Maximo e Media
+ * Os operadores Count,Sum,Min,Max,Average
  */
