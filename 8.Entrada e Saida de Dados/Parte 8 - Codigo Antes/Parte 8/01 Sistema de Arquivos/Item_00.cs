@@ -17,14 +17,27 @@ namespace Listings
             byte[] array = new byte[10];
             int posicao = 0;
             int tamanho = 10;
-
+            //PRIMEIRA LEITURA
             fluxoDeArquivo.Read(array,posicao,tamanho);
 
             foreach (var caractere in array)
             {
                 Console.Write((char)caractere);
             }
-                
+            //SALTO RELATIVO - posicao atual CURRENT
+            //ABSOLUTO RELATIVO =-posicao inicial do arqv BEGIN
+
+
+            //fluxoDeArquivo.Seek(4, SeekOrigin.Begin);
+            fluxoDeArquivo.Position = 2;
+
+            //SEGUNDA LEITURA
+            fluxoDeArquivo.Read(array, posicao, tamanho);
+
+            foreach (var caractere in array)
+            {
+                Console.Write((char)caractere);
+            }
             Console.ReadKey();
         }
     }
