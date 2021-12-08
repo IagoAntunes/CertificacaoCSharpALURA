@@ -12,6 +12,19 @@ namespace _02_04
             List<Diretor> diretores = GetDiretores();
             List<Filme> filmes = GetFilmes();
 
+             var consulta = from f in filmes
+                            where f.Diretor.Nome == "James Cameron"
+                            select f;
+
+            var consultaArray = consulta.ToArray();
+
+            foreach (var item in consultaArray)
+            {
+                Console.WriteLine(item.Titulo);
+            }
+
+
+
             Console.ReadKey();
         }
 
@@ -140,3 +153,11 @@ namespace _02_04
         public string Titulo { get; set; }
     }
 }
+/* 08
+ * Paginação e Sintaxe de Metodo
+ * Paginação com LINQ
+ * Obtendo um numero limitado de elementos com o metodo Take()
+ * Pulando um numero determinado de elementos com o metodo Skip()
+ * Sintaxe de Metodo
+ * Execução adiada x Execucação Imediata
+ */
