@@ -14,10 +14,18 @@ namespace Listings
 
             FileStream fluxoDeArquivo =
                 new FileStream("Diretores.txt",FileMode.Open,FileAccess.Read);
+            byte[] array = new byte[10];
+            int posicao = 0;
+            int tamanho = 10;
 
-                
-                
+            fluxoDeArquivo.Read(array,posicao,tamanho);
 
+            foreach (var caractere in array)
+            {
+                Console.Write((char)caractere);
+            }
+                
+            Console.ReadKey();
         }
     }
 }
