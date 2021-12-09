@@ -25,6 +25,23 @@ namespace Listings
             using (var conexao = new SqlConnection(connectionString))
             {
                 await conexao.OpenAsync();
+                using (var comando = new SqlCommand(@"SELECT d.nome AS Diretor,f.Titulo as Titulo
+                                FROM Filmes AS f
+                                INNER JOIN Diretores AS d
+                                ON d.id = f.DiretorId",conexao))
+                {
+                    var leitor = await comando.ExecuteReaderAsync();
+                    while (await leitor.ReadAsync())
+                    {
+                        //var diretor = leitor.GetString(0);
+                        var diretor = leitor["Diretor"];
+                        //var titulo = leitor.GetString(1);
+                        var titulo = leitor["Titulo"];
+                        Console.WriteLine($"Diretor: {diretor}\nTitulo: {titulo}");
+
+                    }
+
+                }
             } ;
 
 
