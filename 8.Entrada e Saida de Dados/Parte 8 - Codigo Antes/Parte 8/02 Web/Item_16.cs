@@ -8,7 +8,7 @@ namespace Listings
 {
     class Item_16 //HttpClient
     {
-        static void XMain(string[] args)
+        static async Task Main(string[] args)
         {
             //TAREFA:
             //Conectar-se site da caelum (http://www.caelum.com.br)
@@ -19,6 +19,13 @@ namespace Listings
             // - Xamarin (aplicativos de celular / tablet)
             // - Windows Universal Application Platform
 
+            HttpClient cliente = new HttpClient();
+            var textoDoSite = await cliente.GetStringAsync("http://www.caelum.com.br");
+            Console.WriteLine(textoDoSite);
+
+
+
+            Console.ReadKey();
         }
     }
 }
