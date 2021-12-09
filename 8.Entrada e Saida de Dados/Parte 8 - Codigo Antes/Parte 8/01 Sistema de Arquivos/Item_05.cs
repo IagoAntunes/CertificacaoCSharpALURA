@@ -30,8 +30,6 @@ namespace Listings
                 var texto = leitor.ReadToEnd();
                 Console.WriteLine(texto);
             }
-
-
             Console.ReadKey();
         }
     }

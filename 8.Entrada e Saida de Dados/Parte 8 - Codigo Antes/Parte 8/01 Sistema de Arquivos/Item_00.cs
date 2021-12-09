@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 namespace Listings
 {
@@ -12,6 +13,10 @@ namespace Listings
             //2. LER 10 BYTES DO ARQUIVO
             //3. IMPRIMIR ESSES BYTES NO CONSOLE
 
+            //FileStream retorna bytes
+            //StreamWriter,StreamReader pratico
+            //File Manipular arquivo
+
             FileStream fluxoDeArquivo =
                 new FileStream("Diretores.txt",FileMode.Open,FileAccess.Read);
             byte[] array = new byte[10];
@@ -20,6 +25,9 @@ namespace Listings
             //PRIMEIRA LEITURA
             fluxoDeArquivo.Read(array,posicao,tamanho);
 
+            //string texto = Encoding.UTF8.GetString(array);
+            //Console.WriteLine(texto);
+
             foreach (var caractere in array)
             {
                 Console.Write((char)caractere);
@@ -27,7 +35,7 @@ namespace Listings
             //SALTO RELATIVO - posicao atual CURRENT
             //ABSOLUTO RELATIVO =-posicao inicial do arqv BEGIN
 
-
+            Console.WriteLine();
             fluxoDeArquivo.Seek(4, SeekOrigin.Begin);
             //fluxoDeArquivo.Position = 2;
 

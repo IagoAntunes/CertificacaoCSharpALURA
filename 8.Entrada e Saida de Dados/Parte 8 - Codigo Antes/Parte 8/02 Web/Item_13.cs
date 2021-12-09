@@ -14,7 +14,7 @@ namespace Listings
             //1) conectar-se site da caelum (http://www.caelum.com.br)
             //2) obter o conteúdo da página do site
             //3) exibir o conteúdo da página
-
+           
             WebRequest requisicao = WebRequest.Create("http://www.caelum.com.br");
             WebResponse resposta = requisicao.GetResponse();
 

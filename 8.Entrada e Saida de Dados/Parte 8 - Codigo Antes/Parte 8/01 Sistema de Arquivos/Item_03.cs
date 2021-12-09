@@ -22,9 +22,6 @@ namespace Listings
                 string texto = leitorFluxo.ReadToEnd();
                 Console.WriteLine(texto);
             }
-
-
-
         }
     }
 }
