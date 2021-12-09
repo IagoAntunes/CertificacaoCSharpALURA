@@ -44,7 +44,6 @@ namespace Listings
             Console.ReadKey();
 
         }
-
         static async Task ListarFilmes(SqlConnection connection)
         {
             SqlCommand command = new SqlCommand(
@@ -64,8 +63,6 @@ namespace Listings
             }
             reader.Close();
         }
-
-
         #region Banco de dados
         private static async Task CriarBancoDeDadosAsync()
         {
@@ -145,7 +142,7 @@ namespace Listings
         #endregion
     }
 }
-/*Consultar bando de dados
+/*06Consultar bando de dados
  * Montar uma consulta em Transact SQL
  * O objeto SqlConnection
  * O objecto SqlCommand
@@ -154,4 +151,18 @@ namespace Listings
  * Montar uma consulta de atualização em TransactSQL
  * Executar comando de atualização com ExecuteNonQueryAsync
  * Obter numero de linhas afetadas
+ */
+/*07
+ * Recuperar dados de um banco de dados
+ * arualizar dados em um banco de dados 
+ * consumir dados json e xml
+ * recuperar dados usando servicos web
+ * sql injection
+ * simular um ataque com sql injection
+ * criar uma consulta parametrizada
+ * adicionar parametros com o metodo AddWithValue
+ * Acessar serviço de CEP com HttpCliente
+ * Converter um JSON com objeto JsonConvert
+ * Desserualizar valor JSON em um objeto
+ * Ler uma string XML com objeto XmlTextReader
  */

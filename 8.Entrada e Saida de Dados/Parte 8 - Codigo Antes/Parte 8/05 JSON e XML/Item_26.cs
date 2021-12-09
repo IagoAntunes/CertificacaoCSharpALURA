@@ -8,7 +8,7 @@ namespace Listings
 {
     class Item_26 // XML elements
     {
-        static void Main(string[] args)
+        static void xMain(string[] args)
         {
             //TAREFA:
             //1. LER UMA STRING CONTENDO DOCUMENTO XML:
