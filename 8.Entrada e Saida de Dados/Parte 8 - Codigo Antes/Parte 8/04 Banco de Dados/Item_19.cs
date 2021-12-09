@@ -9,11 +9,11 @@ namespace Listings
 {
     class Item_19 //Ler Dados com SQL
     {
-        private const string DatabaseServer = "";
+        private const string DatabaseServer = "(localdb)\\MSSQLLocalDB";
         private const string MasterDatabase = "master";
         private const string DatabaseName = "Cinema";
 
-        static async Task XMain(string[] args)
+        static async Task Main(string[] args)
         {
             await CriarBancoDeDadosAsync();
 
@@ -21,6 +21,12 @@ namespace Listings
             //1. ABRIR UMA CONEXÃO COM O BANCO DE DADOS
             //2. CRIAR UMA CONSULTA PARA TRAZER DIRETOR E TÍTULO DO FILME
             //3. LER E EXIBIR OS RESULTADOS DA CONSULTA
+            const string connectionString;
+            using (var conexao = new SqlConnection(connectionString))
+            {
+                await conexao.OpenAsync();
+            } ;
+
 
             Console.ReadKey();
         }

@@ -27,3 +27,12 @@ namespace Listings
         }
     }
 }
+/*05
+ * Acessar um endereco Web
+ * WebRequest e WebResponse
+ * A classe WebClient e o metodo DownloadString
+ * Acessar assincrono a serviços web
+ * Rodar codigo em varias plataformas com a classe HtppClient
+ * Acessar assincrono a arquivos
+ * capturar exceções geradas por metodos assincronos
+ */
