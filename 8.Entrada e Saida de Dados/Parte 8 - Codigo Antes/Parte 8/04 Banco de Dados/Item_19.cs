@@ -13,7 +13,7 @@ namespace Listings
         private const string MasterDatabase = "master";
         private const string DatabaseName = "Cinema";
 
-        static async Task Main(string[] args)
+        static async Task outro(string[] args)
         {
             await CriarBancoDeDadosAsync();
 
@@ -21,7 +21,7 @@ namespace Listings
             //1. ABRIR UMA CONEXÃO COM O BANCO DE DADOS
             //2. CRIAR UMA CONSULTA PARA TRAZER DIRETOR E TÍTULO DO FILME
             //3. LER E EXIBIR OS RESULTADOS DA CONSULTA
-            const string connectionString;
+            const string connectionString = "";
             using (var conexao = new SqlConnection(connectionString))
             {
                 await conexao.OpenAsync();
