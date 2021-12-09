@@ -12,6 +12,11 @@ namespace Listings
         {
             //TAREFA:   IMPLEMENTAR ACESSO ASSÍNCRONO A ARQUIVOS,
             //          TANTO NA LEITURA QUANTO NA GRAVAÇÃO
+
+
+
+
+
         }
     }
 }

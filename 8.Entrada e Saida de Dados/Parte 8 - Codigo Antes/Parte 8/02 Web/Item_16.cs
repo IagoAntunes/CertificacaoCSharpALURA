@@ -8,7 +8,7 @@ namespace Listings
 {
     class Item_16 //HttpClient
     {
-        static async Task Main(string[] args)
+        static async Task xMain(string[] args)
         {
             //TAREFA:
             //Conectar-se site da caelum (http://www.caelum.com.br)
