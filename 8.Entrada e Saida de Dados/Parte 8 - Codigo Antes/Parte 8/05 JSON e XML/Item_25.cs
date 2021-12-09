@@ -9,7 +9,7 @@ namespace Listings
 {
     class Item_25 //Json
     {
-        static async Task Main(string[] args)
+        static async Task xMain(string[] args)
         {
             //TAREFA:
             //CONSULTAR OS DADOS DO CEP 04101-300
