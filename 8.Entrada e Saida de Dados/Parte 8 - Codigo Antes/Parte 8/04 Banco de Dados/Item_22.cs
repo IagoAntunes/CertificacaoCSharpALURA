@@ -14,7 +14,7 @@ namespace Listings
         private const string MasterDatabase = "master";
         private const string DatabaseName = "Cinema";
 
-        static async Task Main(string[] args)
+        static async Task xMain(string[] args)
         {
             await CriarBancoDeDadosAsync();
 
@@ -145,3 +145,13 @@ namespace Listings
         #endregion
     }
 }
+/*Consultar bando de dados
+ * Montar uma consulta em Transact SQL
+ * O objeto SqlConnection
+ * O objecto SqlCommand
+ * Obter dados com o metodo ExecuteReaderAsync
+ * Ler os dados com o objeto SqlDataReader
+ * Montar uma consulta de atualização em TransactSQL
+ * Executar comando de atualização com ExecuteNonQueryAsync
+ * Obter numero de linhas afetadas
+ */
