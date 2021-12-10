@@ -25,3 +25,8 @@ namespace Programa02
         }
     }
 }
+/*02
+ * Ler atributos
+ * -Inspecionando atributos de uma classe
+ * -Fazendo cast e acessando conteudo de um atributo
+ */

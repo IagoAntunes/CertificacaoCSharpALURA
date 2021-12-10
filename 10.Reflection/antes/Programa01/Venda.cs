@@ -33,6 +33,7 @@ namespace Programa01
             this.Formato = formato;
         }
     }
+
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     class FormatoDetalhadoAttribute : Attribute
     {
@@ -42,9 +43,5 @@ namespace Programa01
         {
             this.Formato = formato;
         }
-
-
     }
-
-
 }
