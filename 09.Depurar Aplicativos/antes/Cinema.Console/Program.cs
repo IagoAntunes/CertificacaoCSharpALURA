@@ -17,6 +17,9 @@ namespace Cinema
             //TraceListener traceListener = new ConsoleTraceListener();
             //TraceListener traceListener = new TextWriterTraceListener("log.txt");
             //Trace.Listeners.Add(traceListener);
+
+            TraceListener traceListener = new EventLogTraceListener("Cinema");
+            Trace.Listeners.Add(traceListener);
             Trace.AutoFlush = true;
 
 
