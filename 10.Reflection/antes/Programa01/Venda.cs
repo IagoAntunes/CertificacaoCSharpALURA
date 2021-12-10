@@ -9,6 +9,7 @@ namespace Programa01
         public string Produto;
         public int Preco;
         public string TipoPagamento;
+        [NonSerialized]//Nao é serializado
         public string Nome;
         public string Cidade;
         public string Estado;

@@ -13,8 +13,17 @@ namespace Programa01
             //TAREFA 1: Imprimir relatório detalhado OU resumido de acordo com a compilação
 
             //TAREFA 2: Verificar se a classe Venda define o atributo [Serializable]
-
+            if (Attribute.IsDefined(typeof(Venda), typeof(SerializableAttribute)))
+            {
+                Console.WriteLine("A classe venda DEFINE o atributo Serializable");
+            }
+            else
+            {
+                Console.WriteLine("A classe venda NAO define o atributo Serializable");
+            }
             //TAREFA 3: Impedir a serialização do campo nome do comprador
+
+
 
             //TAREFA 4: Definir na classe Venda os formatos de impressão detalhada e resumida
 
