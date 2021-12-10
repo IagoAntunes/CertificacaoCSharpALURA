@@ -31,3 +31,11 @@ namespace Programa01
         }
     }
 }
+/*01
+ * Criar e aplicar os atributos
+ * -Oque sao os atributos ?
+ * -Usando atributos do framework
+ * -A classe attribute
+ * -Criando seus proprios atributos
+ * -Limitando utilização de atributos
+ */
