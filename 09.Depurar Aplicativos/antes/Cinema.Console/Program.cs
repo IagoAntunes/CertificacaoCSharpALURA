@@ -37,3 +37,10 @@ namespace Cinema
  * Uma olhada dentro do assembly com o utilitario ILDASM
  * versionamento de assemblies
  */
+/*03
+ * Depurando aplicações
+ * -Como depurar aplicações
+ * -Um programa ,muitas versoes: A compilação condicional
+ * -Multiplos simbolos de compilação condicional
+ * -Compilação condicional com msbuild
+ */

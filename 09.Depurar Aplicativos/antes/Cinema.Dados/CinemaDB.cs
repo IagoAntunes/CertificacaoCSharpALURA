@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Text;
@@ -139,8 +141,17 @@ namespace Cinema.Dados
                 Console.WriteLine("Debugando");
 #elif MODO_DEBUG_QUANTIDADE
                 Console.WriteLine("Quantidade = {0}",filmes.Count);
+//#elif MODO_DEBUG_DETALHADO
+//                ExibirFilmesJson(filmes);
+
 #endif
+            ExibirFilmesJson(filmes);
             return filmes;
+        }
+        [Conditional("MODO_DEBUG_DETALHADO")]
+        void ExibirFilmesJson(IList<Filme> filmes)
+        {
+            Console.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes));
         }
     }
 }
