@@ -137,15 +137,20 @@ namespace Cinema.Dados
                     filmes.Add(new Filme(diretor, titulo));
                 }
             }
+#if MODO_DEBUG && MODO_DEBUG_DETALHADO
+//#warning Cuidado!Voce esta usando mais de um modo Debug
+#error Voce esta usando mais de um modo Debug
+#endif
+
 #if MODO_DEBUG
-                Console.WriteLine("Debugando");
+            Console.WriteLine("Debugando");
 #elif MODO_DEBUG_QUANTIDADE
                 Console.WriteLine("Quantidade = {0}",filmes.Count);
 //#elif MODO_DEBUG_DETALHADO
 //                ExibirFilmesJson(filmes);
 
 #endif
-            ExibirFilmesJson(filmes);
+            ExibirFilmesJsonFormatado(filmes);
             return filmes;
         }
         [Conditional("MODO_DEBUG_DETALHADO")]
