@@ -21,9 +21,10 @@ namespace Cinema
             TraceListener traceListener = new EventLogTraceListener("Cinema");
             Trace.Listeners.Add(traceListener);
             Trace.AutoFlush = true;
+            TraceSource traceSource = new TraceSource("Cinema",SourceLevels.All);
+            traceSource.Listeners.Add(traceListener);
 
-
-
+            traceSource.TraceEvent(TraceEventType.Information,1001,"A aplicação iniciou.");
 
             string estaVariavelEhDebug = "So existe em debug";
             var cinemaDB = new CinemaDB(DatabaseServer, MasterDatabase, DatabaseName);
@@ -42,6 +43,9 @@ namespace Cinema
 
             //traceListener.Flush();
             Console.ReadKey();
+
+            traceSource.TraceEvent(TraceEventType.Information,1002,"A aplicação terminou");
+
         }
     }
 }
@@ -53,6 +57,13 @@ namespace Cinema
  * Linguagem C# X A linguagem intermediaria X linguagem de maquina
  * Uma olhada dentro do assembly com o utilitario ILDASM
  * versionamento de assemblies
+ */
+/*02
+ * Assinando assemblies com nomeFonte
+ * -Os arquivos .pfx e .snk
+ * Desenvolvendo com assinatura atrasada
+ * Arquivos de chaves e atributos de assinatura em assemblyInfo cs
+ * Compartilhando componentes com o cache de assembly global
  */
 /*03
  * Depurando aplicações
@@ -82,4 +93,19 @@ namespace Cinema
  * -Definindo Ouvintes do Trace: Console,Arquivo,EventLog
  * -Gravando Trace no Log de Eventos do Windows
  * -Tipos de Mensagens: TraceInformation,TraceWarning,TraceError
+ */
+/*07
+ * Gravando Mensagens no Event Log
+ * -Mais riqueza de informações com a classe TraceSource
+ * -Medindo Tempo decorrido com stopwatch
+ * por dentor da classe eventLog
+ * -Lendo Log do windows com EventLog
+ */
+/*08
+ * Contadores de Desempenho
+ * -Preparando a aplicação para monitorar desempenho
+ * Adicionando projeto cinemaperformance
+ * incrementando contadores de desempenho
+ * entendendo a criação de categoria e contadores de desempenho
+ * conclusao do curso
  */
