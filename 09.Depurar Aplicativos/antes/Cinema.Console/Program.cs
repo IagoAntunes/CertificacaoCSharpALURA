@@ -44,3 +44,11 @@ namespace Cinema
  * -Multiplos simbolos de compilação condicional
  * -Compilação condicional com msbuild
  */
+/*04
+ * Compilação Condicional
+ * -Evitando a execução de metodo com o atributo de compilação condicional
+ * -Alertando o desenvolvedor com o atributo obsolete
+ * -Evitando compilação inadequada com as diretivas #warning e #error
+ * Suprimindo alertas que poluem a interface
+ * - Como prevenir entrada do depurador em metodos
+ */
