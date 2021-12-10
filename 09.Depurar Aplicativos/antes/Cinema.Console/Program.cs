@@ -1,6 +1,7 @@
 ﻿using Cinema.Dados;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace Cinema
@@ -13,6 +14,14 @@ namespace Cinema
 
         static async Task Main(string[] args)
         {
+            //TraceListener traceListener = new ConsoleTraceListener();
+            //TraceListener traceListener = new TextWriterTraceListener("log.txt");
+            //Trace.Listeners.Add(traceListener);
+            Trace.AutoFlush = true;
+
+
+
+
             string estaVariavelEhDebug = "So existe em debug";
             var cinemaDB = new CinemaDB(DatabaseServer, MasterDatabase, DatabaseName);
 
@@ -28,7 +37,7 @@ namespace Cinema
                 Console.WriteLine(new string('-', 50));
             }
 
-
+            //traceListener.Flush();
             Console.ReadKey();
         }
     }

@@ -27,12 +27,12 @@ namespace Cinema.Dados
 
         public async Task CriarBancoDeDadosAsync()
         {
-            Debug.WriteLine("Entrandno no metodo CriarBancoDeDadosAsyn","METODO");
+            Trace.WriteLine("Entrandno no metodo CriarBancoDeDadosAsyn","METODO");
             await CriarBancoAsync();
             await CriarTabelasAsync();
             await InserirRegistrosAsync();
-            Debug.Unindent();
-            Debug.WriteLine("Saindo do metodo CriarBancoDeDadosAsync", "METODO");
+            Trace.Unindent();
+            Trace.WriteLine("Saindo do metodo CriarBancoDeDadosAsync", "METODO");
         }
 
         private async Task CriarBancoAsync()
@@ -103,7 +103,7 @@ namespace Cinema.Dados
             {
                 conexao.Open();
                 await comando.ExecuteNonQueryAsync();
-                Debug.WriteLine($"Script executado com sucesso: {sql}","SCRIPT");
+                Trace.WriteLine($"Script executado com sucesso: {sql}","SCRIPT");
             }
             catch (System.Exception ex)
             {
@@ -120,8 +120,8 @@ namespace Cinema.Dados
 
         public async Task<IList<Filme>> GetFilmes()
         {
-            Debug.WriteLine("Entrando no metodo GetFilmes", "METODO");
-            Debug.Indent();
+            Trace.WriteLine("Entrando no metodo GetFilmes", "METODO");
+            Trace.Indent();
             IList<Filme> filmes = new List<Filme>();
             string connectionString = $"Server={databaseServer};Integrated security=SSPI;database={databaseName}";
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -144,14 +144,14 @@ namespace Cinema.Dados
 #line default
             }
 #if MODO_DEBUG && MODO_DEBUG_DETALHADO
-//#warning Cuidado!Voce esta usando mais de um modo Debug
-//#error Voce esta usando mais de um modo Debug
+            //#warning Cuidado!Voce esta usando mais de um modo Debug
+            //#error Voce esta usando mais de um modo Debug
 #endif
 
 #if MODO_DEBUG
-            Debug.WriteLine("Debugando");
+            Trace.WriteLine("Debugando");
 #elif MODO_DEBUG_QUANTIDADE
-                Debug.WriteLine("Quantidade = {0}",filmes.Count);
+                Trace.WriteLine("Quantidade = {0}",filmes.Count);
 //#elif MODO_DEBUG_DETALHADO
 //                ExibirFilmesJson(filmes);
 
@@ -159,8 +159,8 @@ namespace Cinema.Dados
 #pragma warning disable CS0618 // O tipo ou membro é obsoleto
             ExibirFilmesJson(filmes);
 #pragma warning restore CS0618 // O tipo ou membro é obsoleto
-            Debug.WriteLine("Saindo do metodo GetFilmes", "METODO");
-            Debug.Unindent();
+            Trace.WriteLine("Saindo do metodo GetFilmes", "METODO");
+            Trace.Unindent();
             return filmes;
         }
         [Conditional("MODO_DEBUG_DETALHADO")]
@@ -168,13 +168,13 @@ namespace Cinema.Dados
         [DebuggerStepThrough]
         void ExibirFilmesJson(IList<Filme> filmes)
         {
-            Debug.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes));
-            Debug.Indent();
+            Trace.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes));
+            Trace.Indent();
         }
         [Conditional("MODO_DEBUG_DETALHADO")]
         void ExibirFilmesJsonFormatado(IList<Filme> filmes)
         {
-            Debug.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes, Formatting.Indented));
+            Trace.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes, Formatting.Indented));
         }
     }
 }
