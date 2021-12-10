@@ -17,7 +17,7 @@ namespace Cinema
             //TraceListener traceListener = new ConsoleTraceListener();
             //TraceListener traceListener = new TextWriterTraceListener("log.txt");
             //Trace.Listeners.Add(traceListener);
-
+            
             TraceListener traceListener = new EventLogTraceListener("Cinema");
             Trace.Listeners.Add(traceListener);
             Trace.AutoFlush = true;
@@ -75,4 +75,11 @@ namespace Cinema
  * -Melhorando o Relatório de Filmes
  * -Muito alem do Console.WriteLine: Usando a Classe Debug e Janela Output
  * -Como usar Entendetação para Estruturar as informações de Debug
+ */
+/*06
+ * Rastreamento de Aplicações
+ * -Permitindo Monitorar aplicação em Produção: A Classe Trace
+ * -Definindo Ouvintes do Trace: Console,Arquivo,EventLog
+ * -Gravando Trace no Log de Eventos do Windows
+ * -Tipos de Mensagens: TraceInformation,TraceWarning,TraceError
  */
