@@ -100,7 +100,7 @@ namespace Cinema.Dados
             {
                 conexao.Open();
                 await comando.ExecuteNonQueryAsync();
-                Console.WriteLine("Script executado com sucesso.");
+                Debug.WriteLine("Script executado com sucesso.");
             }
             catch (System.Exception ex)
             {
@@ -144,9 +144,9 @@ namespace Cinema.Dados
 #endif
 
 #if MODO_DEBUG
-            Console.WriteLine("Debugando");
+            Debug.WriteLine("Debugando");
 #elif MODO_DEBUG_QUANTIDADE
-                Console.WriteLine("Quantidade = {0}",filmes.Count);
+                Debug.WriteLine("Quantidade = {0}",filmes.Count);
 //#elif MODO_DEBUG_DETALHADO
 //                ExibirFilmesJson(filmes);
 
@@ -161,12 +161,12 @@ namespace Cinema.Dados
         [DebuggerStepThrough]
         void ExibirFilmesJson(IList<Filme> filmes)
         {
-            Console.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes));
+            Debug.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes));
         }
         [Conditional("MODO_DEBUG_DETALHADO")]
         void ExibirFilmesJsonFormatado(IList<Filme> filmes)
         {
-            Console.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes, Formatting.Indented));
+            Debug.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes, Formatting.Indented));
         }
     }
 }
