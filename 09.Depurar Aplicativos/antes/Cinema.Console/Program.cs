@@ -13,16 +13,21 @@ namespace Cinema
 
         static async Task Main(string[] args)
         {
+            string estaVariavelEhDebug = "So existe em debug";
             var cinemaDB = new CinemaDB(DatabaseServer, MasterDatabase, DatabaseName);
 
             await cinemaDB.CriarBancoDeDadosAsync();
 
             IList<Filme> filmes = await cinemaDB.GetFilmes();
 
+            Console.WriteLine("Relatorio de Filmes.");
+            Console.WriteLine(new string('=',50));
             foreach (var filme in filmes)
             {
-                Console.WriteLine("Diretor: {0} Titulo: {1}", filme.Diretor, filme.Titulo);
+                Console.WriteLine("Diretor: {0}\n Titulo: {1}", filme.Diretor, filme.Titulo);
+                Console.WriteLine(new string('-', 50));
             }
+
 
             Console.ReadKey();
         }
