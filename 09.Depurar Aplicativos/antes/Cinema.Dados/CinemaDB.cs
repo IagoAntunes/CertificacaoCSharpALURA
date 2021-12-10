@@ -27,9 +27,12 @@ namespace Cinema.Dados
 
         public async Task CriarBancoDeDadosAsync()
         {
+            Debug.WriteLine("Entrandno no metodo CriarBancoDeDadosAsyn","METODO");
             await CriarBancoAsync();
             await CriarTabelasAsync();
             await InserirRegistrosAsync();
+            Debug.Unindent();
+            Debug.WriteLine("Saindo do metodo CriarBancoDeDadosAsync", "METODO");
         }
 
         private async Task CriarBancoAsync()
@@ -100,7 +103,7 @@ namespace Cinema.Dados
             {
                 conexao.Open();
                 await comando.ExecuteNonQueryAsync();
-                Debug.WriteLine("Script executado com sucesso.");
+                Debug.WriteLine($"Script executado com sucesso: {sql}","SCRIPT");
             }
             catch (System.Exception ex)
             {
@@ -117,6 +120,8 @@ namespace Cinema.Dados
 
         public async Task<IList<Filme>> GetFilmes()
         {
+            Debug.WriteLine("Entrando no metodo GetFilmes", "METODO");
+            Debug.Indent();
             IList<Filme> filmes = new List<Filme>();
             string connectionString = $"Server={databaseServer};Integrated security=SSPI;database={databaseName}";
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -154,6 +159,8 @@ namespace Cinema.Dados
 #pragma warning disable CS0618 // O tipo ou membro é obsoleto
             ExibirFilmesJson(filmes);
 #pragma warning restore CS0618 // O tipo ou membro é obsoleto
+            Debug.WriteLine("Saindo do metodo GetFilmes", "METODO");
+            Debug.Unindent();
             return filmes;
         }
         [Conditional("MODO_DEBUG_DETALHADO")]
@@ -162,6 +169,7 @@ namespace Cinema.Dados
         void ExibirFilmesJson(IList<Filme> filmes)
         {
             Debug.WriteLine("O metodo GetFilmes() foi executado com sucesso.{0}", JsonConvert.SerializeObject(filmes));
+            Debug.Indent();
         }
         [Conditional("MODO_DEBUG_DETALHADO")]
         void ExibirFilmesJsonFormatado(IList<Filme> filmes)

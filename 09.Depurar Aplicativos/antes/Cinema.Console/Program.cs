@@ -57,3 +57,10 @@ namespace Cinema
  * Suprimindo alertas que poluem a interface
  * - Como prevenir entrada do depurador em metodos
  */
+/*05
+ * Compilação em Modo Debug e Realease
+ * -Desenvolvimento ou Produção? Escolhendo entre Debug e Release
+ * -Melhorando o Relatório de Filmes
+ * -Muito alem do Console.WriteLine: Usando a Classe Debug e Janela Output
+ * -Como usar Entendetação para Estruturar as informações de Debug
+ */
