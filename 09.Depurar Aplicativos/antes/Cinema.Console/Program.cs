@@ -26,6 +26,14 @@ namespace Cinema
 
             Console.ReadKey();
         }
-
     }
 }
+/*01
+ * Gerenciando Assemblies
+ * O que sao Assemblies? Os arquivos .EXE e .DLL
+ * Dependencia de Assemblies
+ * Compilador c# e o compilador Just in time
+ * Linguagem C# X A linguagem intermediaria X linguagem de maquina
+ * Uma olhada dentro do assembly com o utilitario ILDASM
+ * versionamento de assemblies
+ */

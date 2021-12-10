@@ -11,6 +11,7 @@ namespace Cinema.Dados
 {
     public class CinemaDB
     {
+        //Boolean ModoDebug = true;
         private readonly string databaseServer;
         private readonly string masterDatabase;
         private readonly string databaseName;
@@ -134,7 +135,11 @@ namespace Cinema.Dados
                     filmes.Add(new Filme(diretor, titulo));
                 }
             }
-
+#if MODO_DEBUG
+                Console.WriteLine("Debugando");
+#elif MODO_DEBUG_QUANTIDADE
+                Console.WriteLine("Quantidade = {0}",filmes.Count);
+#endif
             return filmes;
         }
     }

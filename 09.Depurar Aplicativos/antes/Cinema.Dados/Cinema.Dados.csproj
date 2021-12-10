@@ -5,6 +5,14 @@
     <AssemblyName>Cinema.Dados</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>MODO_DEBUG_QUANTIDADE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>MODO_DEBUG_QUANTIDADE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Diretores.txt" />
     <None Remove="Filmes.txt" />
