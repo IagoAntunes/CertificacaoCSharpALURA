@@ -139,7 +139,7 @@ namespace Cinema.Dados
             }
 #if MODO_DEBUG && MODO_DEBUG_DETALHADO
 //#warning Cuidado!Voce esta usando mais de um modo Debug
-#error Voce esta usando mais de um modo Debug
+//#error Voce esta usando mais de um modo Debug
 #endif
 
 #if MODO_DEBUG
@@ -150,7 +150,9 @@ namespace Cinema.Dados
 //                ExibirFilmesJson(filmes);
 
 #endif
-            ExibirFilmesJsonFormatado(filmes);
+#pragma warning disable CS0618 // O tipo ou membro é obsoleto
+            ExibirFilmesJson(filmes);
+#pragma warning restore CS0618 // O tipo ou membro é obsoleto
             return filmes;
         }
         [Conditional("MODO_DEBUG_DETALHADO")]
