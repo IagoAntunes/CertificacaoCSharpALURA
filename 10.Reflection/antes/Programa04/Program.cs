@@ -51,6 +51,17 @@ namespace Programa04
             salario.Attributes = MemberAttributes.Public;
             funcionario.Members.Add(salario);
             //Tarefa 2.5: criar o construtor da classe
+            CodeConstructor construtor = new CodeConstructor();
+            construtor.Attributes = MemberAttributes.Public;
+            CodeParameterDeclarationExpression paramNome =
+                new CodeParameterDeclarationExpression(typeof(string), "nome");
+            construtor.Parameters.Add(paramNome);
+
+            CodeParameterDeclarationExpression paramSalario =
+                new CodeParameterDeclarationExpression(typeof(decimal), "salario");
+            construtor.Parameters.Add(paramSalario);
+
+            funcionario.Members.Add(construtor);
 
             codeNamespace.Types.Add(funcionario);
             unit.Namespaces.Add(codeNamespace);
