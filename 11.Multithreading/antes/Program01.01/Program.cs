@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Program01
 {
@@ -10,6 +12,10 @@ namespace Program01
             //TAREFA 1: Cozinhar e refogar EM SÉRIE
             //TAREFA 2: Cozinhar e refogar EM PARALELO
             //TAREFA 3: Medir o tempo dos 2 procedimentos
+            //CozinharMacarrao();
+            //RefogarMolho();
+            Parallel.Invoke(()=>CozinharMacarrao(),()=>RefogarMolho());
+
 
             Console.WriteLine(
                 "Retire do fogo e ponha o molho sobre o macarrão. " +
@@ -21,6 +27,7 @@ namespace Program01
         static void CozinharMacarrao()
         {
             Console.WriteLine("Cozinhando macarrão...");
+            Thread.Sleep(1000);
             Console.WriteLine("Macarrão já está cozido!");
             Console.WriteLine();
         }
@@ -28,6 +35,7 @@ namespace Program01
         static void RefogarMolho()
         {
             Console.WriteLine("Refogando molho...");
+            Thread.Sleep(2000);
             Console.WriteLine("Molho já está refogado!");
             Console.WriteLine();
         }
