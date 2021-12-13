@@ -95,10 +95,13 @@ namespace Programa03
                 Console.WriteLine(tipoConsulta.ToString());
             }
 
-
-
-
             Console.ReadLine();
         }
     }
 }
+/*03
+ * Usar tipos de namespace System.Reflection
+ * Descobrindo tipos
+ * Acessando membros de um tipo via reflection
+ * modificando propriedade via reflection
+ */
