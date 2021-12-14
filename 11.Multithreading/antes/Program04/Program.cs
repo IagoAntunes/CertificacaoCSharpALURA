@@ -88,3 +88,14 @@ namespace Program04
 
     }
 }
+/*06
+ * Async , await , colecoes simultaneas e bloqueios
+ * Metodos sincronos X metodos assincronos
+ * Conceito de "promessa": trabalhando com tasks
+ * Usando as palavras-chave async e await
+ * Aguardando tarefas com await
+ * Gerenciando dados usando colecoes simultaneas
+ * ConcurrentDictionary,ConcurrentQueue e ConcurrentStack
+ * Implementando bloqueio com locl,lock object e Monitor
+ * Tratamento de erros dentro de um bloco Monitor
+ */

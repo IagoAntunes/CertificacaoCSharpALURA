@@ -29,3 +29,11 @@ namespace Program07_01
 
     }
 }
+/*07
+ * Cancelando uma tarefa de execucao longa
+ * Definindo um cancelamento de tarefas com CancellationTokenSource
+ * Notificando cancelamento de tarefas com CancellationToken
+ * Detectando cancelamento de tarefas com IscancellantionRequestesd
+ * Prevenindo contra condições de concorrencia em programas multi-thread
+ * Implementando metodos thread-safe, com thread join e lock
+ */
