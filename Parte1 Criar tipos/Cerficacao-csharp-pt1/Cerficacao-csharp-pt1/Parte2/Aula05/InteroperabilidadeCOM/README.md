@@ -1,6 +1,6 @@
-   Resolução de sobrecargas
+  - Resolução de sobrecargas
    
-  Dynamic Language Runtime
+ - Dynamic Language Runtime
  
  - Interoperabilidade COM
  
