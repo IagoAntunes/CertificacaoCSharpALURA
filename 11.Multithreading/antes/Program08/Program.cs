@@ -26,7 +26,6 @@ namespace Program07_01
                 Thread.Sleep(500);
             }
         }
-
     }
 }
 /*07
